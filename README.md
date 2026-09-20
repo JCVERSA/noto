@@ -22,7 +22,9 @@ The workflow needs only `contents: read` on `GITHUB_TOKEN` (set in-file).
 ## Usage
 
 1. **Start:** Actions → *Persistent Linux Ubuntu Workspace + SFTP & WebSSH Pro* → *Run workflow*.
-2. Read the Tailscale IP from the step 6 logs.
+   - Input `webssh` (default `true`): set to `false` to skip WebSSH (ttyd)
+     and keep SSH/SFTP only.
+2. Read the Tailscale IP from the step 6 logs (also posted to the run summary).
 3. **SSH/SFTP:** connect to that IP as `runner` (VS Code Remote-SSH works).
 4. **WebSSH:** `https://<machine-name>.<tailnet>.ts.net` (TLS via `tailscale serve`).
 5. **Stop cleanly:** create `/home/runner/stop.txt` inside the session
