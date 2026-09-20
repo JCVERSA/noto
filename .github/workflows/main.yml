@@ -99,7 +99,10 @@ jobs:
           sudo systemctl restart ssh
 
           # H-2 readiness gate: fail fast if sshd did not come up.
-          sudo systemctl is-active --quiet ssh
+          if ! sudo systemctl is-active --quiet ssh; then
+            echo "::error::sshd ne tourne pas apres redemarrage."
+            exit 1
+          fi
           echo "[OK] sshd actif."
 
           mkdir -p /home/runner/.fcc
@@ -137,7 +140,10 @@ jobs:
             tail -n 20 /home/runner/ttyd.log || true
             exit 1
           fi
-          ss -ltn | grep -qF '127.0.0.1:7681'
+          if ! ss -ltn | grep -qF '127.0.0.1:7681'; then
+            echo "::error::ttyd ne repond pas sur 127.0.0.1:7681"
+            exit 1
+          fi
           echo "[OK] ttyd a l'ecoute sur 127.0.0.1:7681."
 
           echo "========================================================="
