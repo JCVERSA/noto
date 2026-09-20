@@ -8,6 +8,10 @@ concurrency:
   group: workspace-host
   cancel-in-progress: false
 
+# Least privilege: this workflow only needs to check out the repo (LOW-4)
+permissions:
+  contents: read
+
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
 
@@ -17,74 +21,126 @@ jobs:
     # Reduced from 360 to 120 min: 6h-wall cancelled runs billed ~360 min each (audit A-7)
     timeout-minutes: 120
 
-steps:
+    steps:
       # Actions pinned by full commit SHA (audit A-8: tag-hijack protection)
       - name: "1. Checkout repository"
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           clean: false
 
-- name: "2. Configuration Runtime Node.js"
-        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
-        with:
-          node-version: 22
+      # NOTE (LOW-3): the setup-node step was removed — nothing in this
+      # workflow uses Node.js. Re-add it if a future step needs node/npm.
 
-- name: "3. Restauration du Workspace"
+      - name: "2. Restauration du Workspace"
         id: cache-workspace
         uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
         with:
-          # Audit A-6: /usr/local and /var/lib/apt/lists removed
+          # Audit A-6: /usr/local and /var/lib/apt/lists removed.
+          # MEDIUM: /home/runner is kept (full $HOME persistence semantics),
+          # but known junk is excluded to slow cache growth against the
+          # 10 GB repo quota (LRU-evicted). Narrow further (e.g. to
+          # /home/runner/work only) once the exact persist-set is confirmed.
           path: |
             /home/runner
             /var/cache/apt/archives
+            !/home/runner/**/*.log
+            !/home/runner/**/*.sock
           key: linux-workspace-${{ github.run_id }}-${{ github.run_attempt }}
           restore-keys: |
             linux-workspace-
 
-- name: "4. Configuration SSH, SFTP & Utilitaires"
+      - name: "3. Configuration SSH, SFTP & Utilitaires"
         env:
           # Audit A-2: secret flows via env, never interpolated into the command line
           SECURE_SSH_PASS: ${{ secrets.SFTP_PASS }}
         run: |
+          set -euo pipefail
           echo "[SYS] Mise a jour des miroirs APT..."
           sudo apt-get update -qq || true
 
-echo "[SYS] Installation des outils essentiels..."
+          # H-1: critical packages fail fast; optional ones are best-effort.
+          # One monolithic install aborts EVERYTHING (apt exit 100) when any
+          # single package is missing — including openssh-server.
+          echo "[SYS] Installation du paquet critique: openssh-server..."
           sudo DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
-            openssh-server \
-            ttyd \
-            unzip \
-            wget \
-            curl \
-            git \
-            gnupg \
-            build-essential \
-            jq \
-            socat \
-            tmux || echo "[WARN] Certains paquets secondaires n'ont pas pu etre mis a jour."
+            openssh-server
 
-echo "[SYS] Configuration de l'acces distant SSH/SFTP..."
+          echo "[SYS] Installation des paquets optionnels (au mieux)..."
+          for pkg in ttyd unzip wget curl git gnupg build-essential jq socat tmux; do
+            if sudo DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends "$pkg"; then
+              echo "[SYS] OK: $pkg"
+            else
+              echo "[WARN] Paquet optionnel indisponible, ignore: $pkg"
+            fi
+          done
+
+          # LOW-5: chpasswd's `user:password` format cannot represent ':'.
+          # Fail with a clear message instead of setting a broken password.
+          # (An empty/unset secret also fails here instead of emptying the password.)
+          if [ -z "${SECURE_SSH_PASS:-}" ]; then
+            echo "::error::Secret SFTP_PASS manquant ou vide."
+            exit 1
+          fi
+          case "$SECURE_SSH_PASS" in
+            *:*)
+              echo "::error::SFTP_PASS ne doit pas contenir ':' (limite du format chpasswd)."
+              exit 1
+              ;;
+          esac
+
+          echo "[SYS] Configuration de l'acces distant SSH/SFTP..."
           printf 'runner:%s' "$SECURE_SSH_PASS" | sudo chpasswd
           sudo sed -i 's/^#\?PasswordAuthentication .*/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          # LOW-2: minimal sshd hardening. Password auth stays (required by
+          # design; exposure is limited to the Tailscale tailnet) — prefer
+          # SSH keys, see README.
+          printf 'PermitEmptyPasswords no\nMaxAuthTries 3\n' | sudo tee /etc/ssh/sshd_config.d/90-workspace.conf >/dev/null
+          sudo sshd -t
           sudo systemctl restart ssh
 
-mkdir -p /home/runner/.fcc
+          # H-2 readiness gate: fail fast if sshd did not come up.
+          sudo systemctl is-active --quiet ssh
+          echo "[OK] sshd actif."
 
-- name: "5. Connexion au Reseau Prive Tailscale"
+          mkdir -p /home/runner/.fcc
+
+      - name: "4. Connexion au Reseau Prive Tailscale"
         id: tailscale
         uses: tailscale/github-action@780049a30b6ff5c378a9e7b389d15ece7a204888 # v4.1.3
         with:
           authkey: ${{ secrets.TAILSCALE_AUTH_KEY }}
 
-- name: "6. Lancement du Workspace Core & Auto-Save"
+      - name: "5. Verification Tailscale"
+        run: |
+          set -euo pipefail
+          # H-2 readiness gate: fail fast if the tailnet did not come up.
+          TS_IP="$(tailscale ip -4)"
+          echo "[OK] Tailscale actif, IP: $TS_IP"
+
+      - name: "6. Lancement du Workspace Core & Auto-Save"
         env:
           SECURE_SSH_PASS: ${{ secrets.SFTP_PASS }}
         run: |
+          set -euo pipefail
           # ttyd on loopback behind tailscale serve TLS (audit A-5)
+          # LOW-1 note: the password is passed via `-c` (visible in the local
+          # process table). Accepted risk: single-tenant ephemeral runner,
+          # single user, tailnet-only exposure. Revisit if ttyd gains a
+          # credential-file option.
           ttyd -i 127.0.0.1 -p 7681 -c "runner:$SECURE_SSH_PASS" bash > /home/runner/ttyd.log 2>&1 &
           sudo tailscale serve --bg 7681 || echo "[WARN] tailscale serve indisponible; ttyd reste sur 127.0.0.1:7681."
 
-echo "========================================================="
+          # H-2 readiness gate: fail fast if ttyd did not come up.
+          sleep 2
+          if ! pgrep -x ttyd >/dev/null; then
+            echo "::error::ttyd n'a pas demarre — voir ttyd.log"
+            tail -n 20 /home/runner/ttyd.log || true
+            exit 1
+          fi
+          ss -ltn | grep -qF '127.0.0.1:7681'
+          echo "[OK] ttyd a l'ecoute sur 127.0.0.1:7681."
+
+          echo "========================================================="
           echo "WORKSPACE LINUX ACTIF & INTERCONNECTE VIA TAILSCALE"
           echo "========================================================="
           echo "Acces WebSSH   : https://<machine-name>.<tailnet>.ts.net (TLS via tailscale serve)"
@@ -97,27 +153,29 @@ echo "========================================================="
           echo " -> Fermeture forcee (GitHub Cancel) : Auto-Save via Signal Trap"
           echo "========================================================="
 
-rm -f /home/runner/stop.txt
+          rm -f /home/runner/stop.txt
           touch /home/runner/keepalive.txt
 
-trigger_auto_save() {
+          trigger_auto_save() {
             echo -e "\n[ALERT] Arret ou annulation detecte par l'infrastructure GitHub !"
             echo "[AUTO-SAVE] Liberation des verrous et destruction de ttyd..."
             sudo killall ttyd || true
+            # LOW-6: best-effort cosmetic teardown — the ephemeral host is
+            # destroyed after the job either way.
             sudo tailscale serve --https=443 off || true
             rm -f /home/runner/stop.txt
             rm -f /home/runner/keepalive.txt
 
-echo "[AUTO-SAVE] Correctif de permissions sur le cache APT..."
+            echo "[AUTO-SAVE] Correctif de permissions sur le cache APT..."
             sudo chown -R runner:runner /var/cache/apt/archives || true
 
-echo "[AUTO-SAVE] Environnement pare pour la sauvegarde d'etat."
+            echo "[AUTO-SAVE] Environnement pare pour la sauvegarde d'etat."
             exit 0
           }
 
-trap trigger_auto_save SIGTERM SIGINT
+          trap trigger_auto_save SIGTERM SIGINT
 
-while [ -f /home/runner/keepalive.txt ]; do
+          while [ -f /home/runner/keepalive.txt ]; do
             if [ -f "/home/runner/stop.txt" ]; then
               echo "[STOP] Signal d'arret manuel detecte depuis l'espace de travail."
               break
@@ -126,12 +184,12 @@ while [ -f /home/runner/keepalive.txt ]; do
             wait $!
           done
 
-echo "[SHUTDOWN] Execution de la fermeture standard du systeme."
+          echo "[SHUTDOWN] Execution de la fermeture standard du systeme."
           sudo killall ttyd || true
           sudo tailscale serve --https=443 off || true
           rm -f /home/runner/keepalive.txt
           rm -f /home/runner/stop.txt
 
-echo "[SHUTDOWN] Correctif final de permissions pour la sauvegarde du cache..."
+          echo "[SHUTDOWN] Correctif final de permissions pour la sauvegarde du cache..."
           sudo chown -R runner:runner /var/cache/apt/archives || true
           echo "[SHUTDOWN] Session cloturee avec succes."
