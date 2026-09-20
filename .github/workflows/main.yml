@@ -103,6 +103,14 @@ jobs:
           # design; exposure is limited to the Tailscale tailnet) — prefer
           # SSH keys, see README.
           printf 'PermitEmptyPasswords no\nMaxAuthTries 3\n' | sudo tee /etc/ssh/sshd_config.d/90-workspace.conf >/dev/null
+          # `sshd -t` needs the privilege-separation dir, which only exists
+          # once the service has started (systemd creates it via
+          # RuntimeDirectory=sshd on start). openssh-server is preinstalled
+          # on the image but never started, so create it first — otherwise
+          # `sshd -t` fails with "Missing privilege separation directory"
+          # even when the config is valid (seen live: exit 255).
+          sudo mkdir -p /run/sshd
+          sudo chmod 755 /run/sshd
           sudo sshd -t
           sudo systemctl restart ssh
 
@@ -176,10 +184,10 @@ jobs:
           {
             echo "## Workspace session #${GITHUB_RUN_NUMBER:-?}"
             echo ""
-            echo "- **Tailscale IP:** \`$TS_IP\`"
-            echo "- **SSH/SFTP:** \`runner@$TS_IP\`"
+            echo "- **Tailscale IP:** `$TS_IP`"
+            echo "- **SSH/SFTP:** `runner@$TS_IP`"
             if [ "${ENABLE_WEBSSH:-true}" = "true" ]; then
-              echo "- **WebSSH:** \`https://<machine-name>.<tailnet>.ts.net\` (TLS via tailscale serve)"
+              echo "- **WebSSH:** `https://<machine-name>.<tailnet>.ts.net` (TLS via tailscale serve)"
             else
               echo "- **WebSSH:** desactive (input webssh=false)"
             fi
