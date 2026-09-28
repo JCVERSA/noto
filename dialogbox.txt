@@ -1,0 +1,230 @@
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.design {
+  height: 200px;
+  width: 200px;
+  border-radius: 40px;
+  background: rgb(255, 11, 0);
+  background: linear-gradient(
+    180deg,
+    rgb(174, 0, 255) 13%,
+    rgb(55, 0, 88) 100%
+  );
+  position: relative;
+  overflow: hidden;
+}
+
+.color-border {
+  border-radius: 50%;
+  background-color: #ffffff20;
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
+}
+.circle-1 {
+  height: 220px;
+  width: 220px;
+  position: absolute;
+  right: -50px;
+  top: -50px;
+}
+.circle-2 {
+  height: 180px;
+  width: 180px;
+}
+.circle-3 {
+  height: 140px;
+  width: 140px;
+}
+.circle-4 {
+  height: 105px;
+  width: 105px;
+}
+.circle-5 {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  box-shadow: inset gray 0px 0px 60px -20px;
+  position: relative;
+}
+.in-circle {
+  position: absolute;
+  background-color: #d1d1d1;
+  border-radius: 50%;
+}
+.in-circle-1 {
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  background-color: #d1d1d1;
+  box-shadow: inset -1px 0px 0px 0px #b6b6b6;
+  top: 20px;
+  right: 20px;
+  border-radius: 50%;
+}
+.in-circle-2 {
+  height: 8px;
+  width: 8px;
+  box-shadow: inset -0.75px 0px 0px 0px #b6b6b6;
+  top: 32px;
+  right: 18px;
+}
+.in-circle-3 {
+  height: 5px;
+  width: 5px;
+  box-shadow: inset -0.25px 0px 0px 0px #b6b6b6;
+  top: 26px;
+  right: 13px;
+}
+
+.shape {
+  height: 200px;
+  width: 200px;
+  background-color: #484848;
+  transform: rotate(45deg);
+  position: absolute;
+}
+.shadow {
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
+}
+.mountain-1 {
+  z-index: 1;
+  bottom: -100px;
+  left: -100px;
+}
+.mountain-2 {
+  bottom: -110px;
+  left: -30px;
+}
+.mountain-3 {
+  z-index: 2;
+  bottom: -150px;
+  left: 90px;
+}
+
+
+/* DEOXY Was Here */
+.form {
+  --background: #d3d3d3;
+  --input-focus: #2d8cf0;
+  --font-color: #323232;
+  --font-color-sub: #666;
+  --bg-color: #fff;
+  --main-color: #323232;
+  padding: 20px;
+  background: var(--background);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20px;
+  border-radius: 5px;
+  border: 2px solid var(--main-color);
+  box-shadow: 4px 4px var(--main-color);
+}
+
+.form > p {
+  font-family: var(--font-DelaGothicOne);
+  color: var(--font-color);
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form > p > span {
+  font-family: var(--font-SpaceMono);
+  color: var(--font-color-sub);
+  font-weight: 600;
+  font-size: 17px;
+}
+
+.separator {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.separator > div {
+  width: 100px;
+  height: 3px;
+  border-radius: 5px;
+  background-color: var(--font-color-sub);
+}
+
+.separator > span {
+  color: var(--font-color);
+  font-family: var(--font-SpaceMono);
+  font-weight: 600;
+}
+
+.oauthButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+    /* margin: 50px auto 0 auto; */
+  padding: auto 15px 15px auto;
+  width: 250px;
+  height: 40px;
+  border-radius: 5px;
+  border: 2px solid var(--main-color);
+  background-color: var(--bg-color);
+  box-shadow: 4px 4px var(--main-color);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--font-color);
+  cursor: pointer;
+  transition: all 250ms;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.oauthButton::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background-color: #212121;
+  z-index: -1;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  transition: all 250ms;
+}
+
+.oauthButton:hover {
+  color: #e8e8e8;
+}
+
+.oauthButton:hover::before {
+  width: 100%;
+}
+
+.form > input {
+  width: 250px;
+  height: 40px;
+  border-radius: 5px;
+  border: 2px solid var(--main-color);
+  background-color: var(--bg-color);
+  box-shadow: 4px 4px var(--main-color);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--font-color);
+  padding: 5px 10px;
+  outline: none;
+}
+
+.icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+
