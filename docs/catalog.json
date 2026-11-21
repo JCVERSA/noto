@@ -1,0 +1,165 @@
+{
+  "documentTitle": "Android & ADB — Répertoire de références",
+  "sourceDocument": "ANDROID-ADB-REFERENCES.md",
+  "sourceUrl": "https://github.com/JCVERSA/noto/blob/main/ANDROID-ADB-REFERENCES.md",
+  "intro": "Catalogue de projets GitHub liés à Android, ADB, Fastboot, à la gestion d'appareils, à l'automatisation, au diagnostic et à la recherche en sécurité mobile.",
+  "objective": "servir de base de références pour l'étude et la conception de fonctionnalités Android, notamment pour Novay. Ce document classe les dépôts par usage, type de projet et langage principal indiqué ou identifiable sur GitHub.",
+  "repositoryCount": 46,
+  "lastOrganized": "21 novembre 2026",
+  "languageNote": "le langage indiqué correspond au langage principal GitHub lorsqu'il est connu ; « non confirmé » signifie que la métadonnée n'était pas disponible ou suffisamment claire.",
+  "statusNote": "les dépôts peuvent évoluer. Vérifier le README, les releases, les issues et la date du dernier commit avant toute intégration.",
+  "categories": [
+    { "id": "01", "name": "Gestion des appareils et contrôle ADB" },
+    { "id": "02", "name": "Installation et gestion des applications" },
+    { "id": "03", "name": "Debloating et optimisation" },
+    { "id": "04", "name": "Automatisation, agents IA et MCP" },
+    { "id": "05", "name": "Diagnostic, monitoring et utilitaires système" },
+    { "id": "06", "name": "Forensique numérique Android (DFIR)", "note": "Ces projets sont pertinents pour l'analyse défensive, l'audit autorisé et la préservation d'éléments techniques. Les collectes doivent respecter le consentement, la propriété de l'appareil et les règles applicables." },
+    { "id": "07", "name": "Audit et recherche en sécurité mobile" },
+    { "id": "08", "name": "Outils sensibles et recherche offensive", "note": "Attention : cette section répertorie des dépôts à titre de repérage et de classification. Certains sont associés à l'accès distant, à l'exploitation ou au contournement de protections. Ils ne sont pas des composants à intégrer tels quels dans une application grand public. Ne les utiliser que dans un laboratoire contrôlé, sur des appareils possédés ou explicitement autorisés. Aucune procédure d'exploitation n'est documentée ici." },
+    { "id": "09", "name": "Documentation et listes de références" },
+    { "id": "10", "name": "Boîtes à outils complémentaires" }
+  ],
+  "repositories": [
+    { "name": "QADB", "url": "https://github.com/ludoven/QADB", "categoryId": "01", "type": "GUI multiplateforme", "language": "Kotlin", "description": "Interface graphique pour lancer rapidement des commandes ADB." },
+    { "name": "ya-webadb", "url": "https://github.com/yume-chan/ya-webadb", "categoryId": "01", "type": "Bibliothèque / interface web", "language": "TypeScript", "description": "Utiliser ADB depuis un navigateur compatible. Référence intéressante pour une interface web." },
+    { "name": "Adb-Device-Manager-2", "url": "https://github.com/Shrey113/Adb-Device-Manager-2", "categoryId": "01", "type": "Gestionnaire GUI", "language": "HTML (langage GitHub)", "description": "Gestion et contrôle d'appareils Android, avec plusieurs fonctions de gestion à distance." },
+    { "name": "ByteADB-V1", "url": "https://github.com/AliXByte/ByteADB-V1", "categoryId": "01", "type": "CLI / dashboard", "language": "Python", "description": "Tableau de bord de contrôle d'appareils Android." },
+    { "name": "ADB_Toolbox", "url": "https://github.com/Nahvine/ADB_Toolbox", "categoryId": "01", "type": "CLI / toolkit", "language": "Python", "description": "Regroupement de commandes et d'outils ADB pour simplifier les opérations courantes." },
+    { "name": "epic-adb", "url": "https://github.com/mdnaimul22/epic-adb", "categoryId": "01", "type": "Dashboard / CLI", "language": "Python", "description": "Interface et commandes ADB, avec fonctions complémentaires de diagnostic et de sauvegarde/restauration." },
+    { "name": "ADB-Toolkit", "url": "https://github.com/ASHWIN990/ADB-Toolkit", "categoryId": "01", "type": "Toolkit CLI", "language": "Shell", "description": "Collection de commandes et de fonctions ADB." },
+    { "name": "ADBKit", "url": "https://github.com/Drenzzz/ADBKit", "categoryId": "01", "type": "GUI", "language": "TypeScript", "description": "Interface regroupant ADB, Fastboot et Scrcpy." },
+    { "name": "MobyDroid", "url": "https://github.com/ibilux/MobyDroid", "categoryId": "01", "type": "Gestionnaire GUI", "language": "Java", "description": "Gestionnaire d'appareils Android pour Linux, Windows et macOS.", "statusType": "last-push", "status": "Dernier push signalé : 12 décembre 2024." },
+    { "name": "Quest-ADB-Dashboard", "url": "https://github.com/dwgx/Quest-ADB-Dashboard", "categoryId": "01", "type": "Dashboard spécialisé", "language": "C#", "description": "Diagnostic d'appareils Meta Quest et export de rapports HTML." },
+
+    { "name": "uber-adb-tools", "url": "https://github.com/patrickfav/uber-adb-tools", "categoryId": "02", "type": "CLI / toolkit", "language": "Java", "description": "Opérations groupées sur les APK : installation, désinstallation et gestion de plusieurs appareils." },
+    { "name": "AppManager", "url": "https://github.com/MuntashirAkon/AppManager", "categoryId": "02", "type": "Application Android", "language": "Java / Kotlin", "description": "Gestionnaire avancé de paquets et d'applications Android." },
+    { "name": "apk-utilities", "url": "https://github.com/ViRb3/apk-utilities", "categoryId": "02", "type": "Toolkit", "language": "Python", "description": "Scripts et utilitaires destinés à travailler avec les fichiers APK." },
+    { "name": "Latest-adb-fastboot-installer-for-windows", "url": "https://github.com/fawazahmed0/Latest-adb-fastboot-installer-for-windows", "categoryId": "02", "type": "Installateur Windows", "language": "Non confirmé", "description": "Facilite l'installation d'ADB et de Fastboot sous Windows." },
+
+    { "name": "universal-android-debloater", "url": "https://github.com/0x192/universal-android-debloater", "categoryId": "03", "type": "GUI", "language": "Rust", "description": "Outil de debloating pour appareils Android non rootés." },
+    { "name": "universal-android-debloater-next-generation", "url": "https://github.com/Universal-Debloater-Alliance/universal-android-debloater-next-generation", "categoryId": "03", "type": "GUI", "language": "Rust", "description": "Nouvelle génération / continuation communautaire du projet Universal Android Debloater." },
+    { "name": "samsung-debloat-adb", "url": "https://github.com/olivierluethy/samsung-debloat-adb", "categoryId": "03", "type": "Script interactif", "language": "PowerShell", "description": "Gestion de certaines applications préinstallées sur des appareils Samsung." },
+
+    { "name": "lamda", "url": "https://github.com/firerpa/lamda", "categoryId": "04", "type": "Plateforme d'automatisation", "language": "Python", "description": "Contrôle à distance, automatisation de l'interface, OCR, WebRTC et gestion de plusieurs appareils." },
+    { "name": "agent-device", "url": "https://github.com/callstack/agent-device", "categoryId": "04", "type": "CLI / MCP / API", "language": "TypeScript", "description": "Permet à des agents d'interagir avec des applications et appareils mobiles, web et desktop." },
+    { "name": "droidmind", "url": "https://github.com/hyperb1iss/droidmind", "categoryId": "04", "type": "Agent IA / MCP", "language": "Python", "description": "Expose des capacités de contrôle Android via ADB à des agents compatibles MCP." },
+    { "name": "android-agent", "url": "https://github.com/ghost-in-the-droid/android-agent", "categoryId": "04", "type": "Agent IA / MCP", "language": "Python", "description": "Outils d'interaction avec Android via ADB et iOS via WebDriverAgent." },
+    { "name": "phonedriver", "url": "https://github.com/hridaya423/phonedriver", "categoryId": "04", "type": "CLI / MCP", "language": "Rust", "description": "Outils permettant à des agents de piloter des appareils mobiles et de lire des informations à l'écran, avec étapes de validation." },
+
+    { "name": "android-dev-monitor", "url": "https://github.com/marko69420/android-dev-monitor", "categoryId": "05", "type": "Outil de monitoring GUI", "language": "C#", "description": "Surveillance de métriques telles que CPU, RAM, réseau, FPS, entrées/sorties et logs." },
+    { "name": "Android-recovery", "url": "https://github.com/lutfizp/Android-recovery", "categoryId": "05", "type": "CLI / récupération", "language": "Python", "description": "Outil orienté récupération et examen de données Android accessibles ; les résultats dépendent de l'appareil et des données encore présentes." },
+    { "name": "RebootNya", "url": "https://github.com/daisukiKaffuChino/RebootNya", "categoryId": "05", "type": "Application Android", "language": "Kotlin", "description": "Utilitaire de redémarrage utilisant des mécanismes tels que Root ou Shizuku." },
+    { "name": "Genymotion_ARM_Translation", "url": "https://github.com/m9rco/Genymotion_ARM_Translation", "categoryId": "05", "type": "Outil de compatibilité", "language": "Python", "description": "Ressources liées à la compatibilité ARM dans Genymotion." },
+    { "name": "Nightzuku", "url": "https://github.com/kerneldroid/Nightzuku", "categoryId": "05", "type": "Application Android / fork", "language": "Kotlin", "description": "Fork de Shizuku avec interface Material et mises à jour de compatibilité Android." },
+
+    { "name": "androidqf", "url": "https://github.com/mvt-project/androidqf", "categoryId": "06", "type": "CLI / collecte forensique", "language": "Go", "description": "Collecte d'informations et d'artefacts Android pour l'analyse de sécurité." },
+    { "name": "AegisDroid", "url": "https://github.com/0xhroot/aegisdroid", "categoryId": "06", "type": "Framework DFIR", "language": "Python", "description": "Analyse de sécurité Android, chasse aux menaces, analyse APK et règles YARA." },
+    { "name": "ADBExtractorAndAnalyzer", "url": "https://github.com/labcif/ADBExtractorAndAnalyzer", "categoryId": "06", "type": "Framework DFIR", "language": "Python", "description": "Acquisition et analyse d'artefacts via ADB, avec intégrations à des outils d'analyse." },
+    { "name": "androidForensics", "url": "https://github.com/DouglasFreshHabian/androidForensics", "categoryId": "06", "type": "Collection de scripts", "language": "Shell", "description": "Collecte d'informations système et d'artefacts pour des examens autorisés." },
+    { "name": "osaft", "url": "https://github.com/j-koenig/osaft", "categoryId": "06", "type": "Toolkit forensique", "language": "Java", "description": "Open Source Android Forensic Toolkit ; projet ancien à traiter comme référence historique.", "statusType": "historic", "status": "Très ancien ; dernier push signalé : 23 mai 2013." },
+
+    { "name": "BridgeSimple", "url": "https://github.com/0u44/BridgeSimple", "categoryId": "07", "type": "Framework d'analyse", "language": "Python", "description": "Analyse d'appareils Android/iOS, recherche en sécurité mobile et examen technique." },
+    { "name": "mobile-pentest-toolkit", "url": "https://github.com/ByteSnipers/mobile-pentest-toolkit", "categoryId": "07", "type": "Toolkit de test", "language": "Python", "description": "Regroupe des outils et workflows de test de sécurité mobile dans un cadre autorisé." },
+    { "name": "Android-suite", "url": "https://github.com/Jaikumar3/Android-suite", "categoryId": "07", "type": "Suite d'analyse", "language": "Non confirmé", "description": "Ensemble d'outils et d'automatisations pour l'analyse et la recherche Android ; vérifier le périmètre réel dans le dépôt." },
+
+    { "name": "PhoneSploit-Pro", "url": "https://github.com/AzeemIdrisi/PhoneSploit-Pro", "categoryId": "08", "type": "Framework sensible", "language": "Python", "description": "Projet de recherche autour de l'accès et de l'administration Android via ADB." },
+    { "name": "Ghost", "url": "https://github.com/EntySec/Ghost", "categoryId": "08", "type": "Framework offensif", "language": "Python", "description": "Framework associé à des fonctions post-exploitation via ADB." },
+    { "name": "PhoneSploit", "url": "https://github.com/prbhtkumr/PhoneSploit", "categoryId": "08", "type": "Toolkit sensible", "language": "Python", "description": "Projet distinct de PhoneSploit-Pro, autour de scénarios d'accès Android via ADB." },
+    { "name": "adbsploit", "url": "https://github.com/mesquidar/adbsploit", "categoryId": "08", "type": "Toolkit de recherche", "language": "Python", "description": "Ancien projet de recherche sur la sécurité ADB ; dépôt archivé.", "statusType": "archived", "status": "Archivé ; dernier push signalé : 12 mars 2023." },
+    { "name": "adbwebkit", "url": "https://github.com/jxroot/adbwebkit", "categoryId": "08", "type": "Toolkit de sécurité", "language": "JavaScript", "description": "Outils liés à ADB et à la sécurité mobile." },
+    { "name": "AdbNet", "url": "https://github.com/0x1CA3/AdbNet", "categoryId": "08", "type": "Outil réseau sensible", "language": "Python", "description": "Le dépôt décrit des recherches de périphériques Android exposés et des scénarios d'exploitation ; ne pas l'utiliser hors environnement explicitement autorisé." },
+    { "name": "Xteam", "url": "https://github.com/xploitstech/Xteam", "categoryId": "08", "type": "Suite de sécurité", "language": "Python", "description": "Suite regroupant plusieurs catégories d'outils de sécurité ; certaines fonctions sont sensibles." },
+    { "name": "ADB-FRP-Bypass", "url": "https://github.com/quitehacker/ADB-FRP-Bypass", "categoryId": "08", "type": "Scripts / documentation", "language": "Non confirmé", "description": "Dépôt portant sur le sujet du verrouillage FRP et de son contournement. À ne pas considérer comme une méthode légitime de récupération de compte.", "statusType": "last-push", "status": "Dernier push signalé : 15 juin 2021." },
+    { "name": "unlock-Bootloader", "url": "https://github.com/BiltuDas1/unlock-Bootloader", "categoryId": "08", "type": "Scripts / toolkit", "language": "Non confirmé", "description": "Ressources autour du déverrouillage du bootloader ; dépôt archivé.", "statusType": "archived", "status": "Archivé ; dernier push signalé : 26 juin 2025." },
+
+    { "name": "awesome-adb", "url": "https://github.com/mzlogin/awesome-adb", "categoryId": "09", "type": "Collection de ressources", "language": "Markdown / documentation", "description": "Liste de commandes, astuces, outils et références ADB." },
+
+    { "name": "nPhoneKIT", "url": "https://github.com/nlckysolutions/nPhoneKIT", "categoryId": "10", "type": "Toolkit Android", "language": "Python", "description": "Boîte à outils généraliste destinée aux appareils Android." }
+  ],
+  "duplicates": [
+    "PhoneSploit-Pro apparaissait deux fois dans la liste d'origine ; il est conservé une seule fois.",
+    "universal-android-debloater et universal-android-debloater-next-generation sont deux dépôts distincts.",
+    "PhoneSploit et PhoneSploit-Pro sont deux dépôts distincts ; ils ne sont pas fusionnés.",
+    "Le catalogue contient 46 dépôts uniques après suppression du doublon exact."
+  ],
+  "maintenanceIntro": "Les états ci-dessous sont des avertissements issus du relevé précédent et doivent être revérifiés avant utilisation :",
+  "maintenance": [
+    { "name": "adbsploit", "url": "https://github.com/mesquidar/adbsploit", "status": "Archivé ; dernier push signalé : 12 mars 2023." },
+    { "name": "unlock-Bootloader", "url": "https://github.com/BiltuDas1/unlock-Bootloader", "status": "Archivé ; dernier push signalé : 26 juin 2025." },
+    { "name": "osaft", "url": "https://github.com/j-koenig/osaft", "status": "Très ancien ; dernier push signalé : 23 mai 2013." },
+    { "name": "MobyDroid", "url": "https://github.com/ibilux/MobyDroid", "status": "Dernier push signalé : 12 décembre 2024." },
+    { "name": "ADB-FRP-Bypass", "url": "https://github.com/quitehacker/ADB-FRP-Bypass", "status": "Dernier push signalé : 15 juin 2021." }
+  ],
+  "preIntegrationChecks": [
+    "Lire le README et la licence du dépôt.",
+    "Vérifier les dernières releases, commits, issues et pull requests.",
+    "Vérifier les versions minimales d'Android, d'ADB, de Java, de Python ou de Node.js.",
+    "Examiner les permissions demandées et les commandes exécutées.",
+    "Tester dans un environnement isolé et sur un appareil de test.",
+    "Ne pas intégrer automatiquement un dépôt archivé ou un outil sensible.",
+    "Préférer les API Android documentées et les mécanismes d'autorisation explicites."
+  ],
+  "novayIntro": "Cette sélection privilégie les interfaces, la gestion d'appareils, les opérations d'applications, l'automatisation et le diagnostic. Elle ne signifie pas que le code peut être repris directement : chaque licence, dépendance et architecture doit être vérifiée.",
+  "novayRecommendations": [
+    {
+      "need": "Interface de gestion ADB",
+      "references": [
+        { "name": "QADB", "url": "https://github.com/ludoven/QADB" },
+        { "name": "ADBKit", "url": "https://github.com/Drenzzz/ADBKit" },
+        { "name": "MobyDroid", "url": "https://github.com/ibilux/MobyDroid" }
+      ],
+      "why": "Inspiration pour organiser les commandes et les outils dans une interface."
+    },
+    {
+      "need": "ADB depuis une interface web",
+      "references": [
+        { "name": "ya-webadb", "url": "https://github.com/yume-chan/ya-webadb" }
+      ],
+      "why": "Architecture web et intégration ADB côté navigateur."
+    },
+    {
+      "need": "Automatisation multi-appareils",
+      "references": [
+        { "name": "lamda", "url": "https://github.com/firerpa/lamda" },
+        { "name": "agent-device", "url": "https://github.com/callstack/agent-device" }
+      ],
+      "why": "Références pour l'automatisation et les interactions pilotées par outils."
+    },
+    {
+      "need": "Gestion des applications",
+      "references": [
+        { "name": "AppManager", "url": "https://github.com/MuntashirAkon/AppManager" },
+        { "name": "uber-adb-tools", "url": "https://github.com/patrickfav/uber-adb-tools" }
+      ],
+      "why": "Gestion des paquets et opérations groupées."
+    },
+    {
+      "need": "Debloating encadré",
+      "references": [
+        { "name": "Universal Android Debloater Next Generation", "url": "https://github.com/Universal-Debloater-Alliance/universal-android-debloater-next-generation" }
+      ],
+      "why": "Référence pour présenter les applications système et leurs risques."
+    },
+    {
+      "need": "Diagnostic",
+      "references": [
+        { "name": "android-dev-monitor", "url": "https://github.com/marko69420/android-dev-monitor" },
+        { "name": "epic-adb", "url": "https://github.com/mdnaimul22/epic-adb" }
+      ],
+      "why": "Métriques, journaux et informations d'appareil."
+    }
+  ],
+  "novayFeatures": [
+    "Détection et sélection de plusieurs appareils.",
+    "Vue d'ensemble de l'appareil : modèle, version Android, état de connexion et capacités disponibles.",
+    "Gestion des applications et des fichiers APK.",
+    "File d'opérations avec états clairs, progression, annulation lorsque techniquement possible et reprise lorsque prise en charge.",
+    "Historique des opérations et journaux consultables.",
+    "Diagnostic système et affichage des métriques disponibles.",
+    "Automatisation avec aperçu de l'action et confirmation explicite pour les opérations sensibles."
+  ],
+  "directoryTreeIntro": "Pour conserver les références dans un dossier dédié si le catalogue est ensuite réparti en plusieurs fichiers :",
+  "directoryTree": "ANDROID-ADB-REFERENCES/\n├── 01-DEVICE-MANAGEMENT/\n│   ├── GUI/\n│   ├── CLI/\n│   └── MULTI-DEVICE/\n├── 02-APP-MANAGEMENT/\n│   ├── APK/\n│   ├── INSTALLATION/\n│   └── PACKAGE-MANAGEMENT/\n├── 03-DEBLOAT-OPTIMIZATION/\n│   ├── UNIVERSAL/\n│   └── MANUFACTURER-SPECIFIC/\n├── 04-AUTOMATION-AI/\n│   ├── AI-AGENTS/\n│   ├── MCP/\n│   ├── REMOTE-CONTROL/\n│   └── UI-AUTOMATION/\n├── 05-DIAGNOSTICS/\n│   ├── MONITORING/\n│   ├── SYSTEM-INFORMATION/\n│   └── RECOVERY/\n├── 06-DIGITAL-FORENSICS/\n│   ├── ACQUISITION/\n│   ├── ANALYSIS/\n│   └── THREAT-DETECTION/\n├── 07-SECURITY-RESEARCH/\n│   ├── AUDITING/\n│   ├── MOBILE-PENTEST/\n│   └── SENSITIVE-TOOLS/\n└── 08-DOCUMENTATION/\n    ├── ADB/\n    └── REFERENCES/",
+  "maintenanceNote": "Ce fichier est un catalogue de références, pas une validation de sécurité ou de qualité des projets listés. Les descriptions sont volontairement synthétiques. Avant toute réutilisation de code, confirmer l'activité du dépôt, sa licence, ses dépendances et son adéquation avec la version Android ciblée."
+}

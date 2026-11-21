@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="fr" data-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#163d35">
+    <meta name="description" content="Catalogue de 46 références GitHub autour d'Android, d'ADB, du diagnostic, de l'automatisation et de la sécurité mobile.">
+    <title>Android &amp; ADB — Répertoire de références | Noto</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Aller au contenu principal</a>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="brand" href="#top" aria-label="Noto, répertoire Android et ADB">
+          <span class="brand__name">noto<span> / références</span></span>
+        </a>
+        <nav class="main-nav" aria-label="Navigation principale">
+          <a href="#catalogue">Catalogue</a>
+          <a href="#novay">Pour Novay</a>
+          <a href="#notes">Notes source</a>
+        </nav>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Activer le thème sombre" aria-pressed="false">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"></path>
+          </svg>
+          <span class="visually-hidden" id="theme-label">Activer le thème sombre</span>
+        </button>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="hero" id="top" aria-labelledby="page-title">
+        <div class="hero__inner">
+          <div class="hero__copy">
+            <p class="eyebrow"><span class="eyebrow__line" aria-hidden="true"></span> NOTO / INDEX ANDROID</p>
+            <h1 id="page-title">Android <span>&amp;</span><br>ADB</h1>
+            <p class="hero__description" id="catalog-intro">Catalogue de projets GitHub liés à Android, ADB, Fastboot, à la gestion d'appareils, à l'automatisation, au diagnostic et à la recherche en sécurité mobile.</p>
+            <div class="hero__meta">
+              <p><strong id="hero-total">46</strong> dépôts uniques <span class="meta-separator" aria-hidden="true">/</span> <span id="organized-date">21 novembre 2026</span></p>
+            </div>
+          </div>
+          <div class="hero-art" aria-hidden="true">
+            <svg class="hero-art__diagram" viewBox="0 0 400 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="diagram-line" d="M143 137h111m-55-55v55m0 0v58m0-58h55"></path>
+              <circle class="diagram-node" cx="199" cy="137" r="7"></circle>
+              <rect class="diagram-device" x="42" y="33" width="116" height="214" rx="20"></rect>
+              <rect class="diagram-screen" x="53" y="58" width="94" height="160" rx="8"></rect>
+              <path class="diagram-screen-line" d="M72 100h50M72 116h34M72 151h50M72 167h34"></path>
+              <circle class="diagram-home" cx="100" cy="232" r="3"></circle>
+              <rect class="diagram-terminal" x="251" y="74" width="113" height="70" rx="7"></rect>
+              <path class="diagram-terminal-line" d="m268 101 8 7-8 7m17 0h18"></path>
+              <text class="diagram-terminal-label" x="267" y="91">ADB / SHELL</text>
+              <rect class="diagram-terminal" x="251" y="172" width="113" height="56" rx="7"></rect>
+              <circle class="diagram-dot" cx="272" cy="200" r="5"></circle>
+              <path class="diagram-terminal-line" d="M287 200h54"></path>
+              <path class="diagram-orbit" d="M17 137h17m348 0h17M200 16v13m0 222v13"></path>
+            </svg>
+            <p class="hero-art__caption"><span>46</span> REPOSITORIES <i aria-hidden="true"></i> 10 DOMAINES</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="catalog-section" id="catalogue" aria-labelledby="catalogue-heading">
+        <div class="content-width">
+          <div class="section-heading section-heading--catalogue">
+            <div>
+              <p class="section-kicker">01 — 10 / Références</p>
+              <h2 id="catalogue-heading">Explorer le catalogue</h2>
+              <p class="section-description">Filtrez les projets par domaine, langage ou type d'outil. La recherche couvre aussi les mots-clés de chaque fiche.</p>
+            </div>
+            <a class="source-link" id="source-link-top" href="https://github.com/JCVERSA/noto/blob/main/ANDROID-ADB-REFERENCES.md" target="_blank" rel="noopener noreferrer">
+              Lire le Markdown source <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+
+          <form class="filter-form" id="filter-form" role="search" autocomplete="off">
+            <div class="search-field">
+              <label for="repo-search">Recherche</label>
+              <div class="search-field__control">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <circle cx="10.8" cy="10.8" r="6.8"></circle>
+                  <path d="m16 16 5 5"></path>
+                </svg>
+                <input id="repo-search" name="search" type="search" placeholder="Nom, description, catégorie, langage…" aria-describedby="search-help">
+              </div>
+              <span class="visually-hidden" id="search-help">Recherche instantanée dans les noms, descriptions, catégories, langages et types d'outils.</span>
+            </div>
+            <div class="filter-controls">
+              <label class="filter-field" for="category-filter">
+                <span>Domaine</span>
+                <select id="category-filter" name="category">
+                  <option value="">Tous les domaines</option>
+                </select>
+              </label>
+              <label class="filter-field" for="language-filter">
+                <span>Langage</span>
+                <select id="language-filter" name="language">
+                  <option value="">Tous les langages</option>
+                </select>
+              </label>
+              <label class="filter-field" for="type-filter">
+                <span>Type d'outil</span>
+                <select id="type-filter" name="type">
+                  <option value="">Tous les types</option>
+                </select>
+              </label>
+              <button class="clear-filters" id="clear-filters" type="button" disabled>Effacer les filtres</button>
+            </div>
+          </form>
+
+          <div class="results-overview">
+            <p id="results-status" role="status" aria-live="polite" aria-atomic="true">Chargement du catalogue local…</p>
+            <span class="results-overview__rule" aria-hidden="true"></span>
+            <p class="results-overview__total"><span id="catalog-total">46</span> références au total</p>
+          </div>
+
+          <div class="catalog-layout">
+            <aside class="category-sidebar" aria-labelledby="category-nav-title">
+              <div class="category-sidebar__heading">
+                <p class="section-kicker">Navigation</p>
+                <h2 id="category-nav-title">Par domaine</h2>
+              </div>
+              <nav aria-label="Filtrer par domaine">
+                <ul class="category-nav" id="category-nav"></ul>
+              </nav>
+            </aside>
+
+            <div class="results-area" id="results-top">
+              <div class="results-heading-row">
+                <div>
+                  <p class="section-kicker">Répertoire GitHub</p>
+                  <h2 id="results-heading" tabindex="-1">Les références</h2>
+                </div>
+                <p class="results-count" id="results-count" aria-hidden="true">—</p>
+              </div>
+              <div class="repository-results" id="repository-results" aria-busy="true">
+                <div class="loading-state">
+                  <span class="loading-state__mark" aria-hidden="true"></span>
+                  <p>Préparation des références…</p>
+                </div>
+              </div>
+              <div class="empty-state" id="empty-state" hidden>
+                <p class="empty-state__index" aria-hidden="true">0 / 46</p>
+                <h3>Aucun dépôt ne correspond.</h3>
+                <p>Essayez un autre terme ou retirez un filtre pour élargir les résultats.</p>
+                <button class="text-button" id="empty-clear" type="button">Effacer les filtres</button>
+              </div>
+              <div class="error-state" id="error-state" hidden role="alert">
+                <h3>Le catalogue n'a pas pu être chargé.</h3>
+                <p>Vérifiez que les fichiers du dossier docs/ sont publiés ensemble, puis rechargez la page.</p>
+                <a class="source-link" href="https://github.com/JCVERSA/noto/blob/main/ANDROID-ADB-REFERENCES.md" target="_blank" rel="noopener noreferrer">Consulter le fichier source <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="novay-section" id="novay" aria-labelledby="novay-heading">
+        <div class="content-width">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">12 / Sélection recommandée</p>
+              <h2 id="novay-heading">Pistes pour Novay</h2>
+              <p class="section-description" id="novay-intro"></p>
+            </div>
+          </div>
+          <div class="recommendations" id="novay-recommendations"></div>
+          <div class="novay-features">
+            <div>
+              <p class="section-kicker">Fonctionnalités inspirantes</p>
+              <h3>Des idées à évaluer, pas des intégrations automatiques.</h3>
+            </div>
+            <ul id="novay-features"></ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="notes-section" id="notes" aria-labelledby="notes-heading">
+        <div class="content-width">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">11 &amp; 13 / Contexte de la source</p>
+              <h2 id="notes-heading">Notes, maintenance et précautions</h2>
+              <p class="section-description" id="source-objective"></p>
+            </div>
+          </div>
+
+          <div class="source-metadata" aria-label="Métadonnées du document source">
+            <div>
+              <span>Document</span>
+              <a id="source-document-link" href="https://github.com/JCVERSA/noto/blob/main/ANDROID-ADB-REFERENCES.md" target="_blank" rel="noopener noreferrer">ANDROID-ADB-REFERENCES.md <span aria-hidden="true">↗</span></a>
+            </div>
+            <div>
+              <span>Langage</span>
+              <p id="language-note"></p>
+            </div>
+            <div>
+              <span>Statut du catalogue</span>
+              <p id="status-note"></p>
+            </div>
+          </div>
+
+          <details class="source-disclosure">
+            <summary><span>Doublons et projets distincts</span><span class="disclosure-mark" aria-hidden="true">+</span></summary>
+            <ul class="source-list" id="duplicate-list"></ul>
+          </details>
+
+          <details class="source-disclosure">
+            <summary><span>État de maintenance signalé</span><span class="disclosure-mark" aria-hidden="true">+</span></summary>
+            <p class="disclosure-intro" id="maintenance-intro"></p>
+            <div class="table-scroll">
+              <table class="maintenance-table">
+                <thead><tr><th scope="col">Projet</th><th scope="col">État signalé</th></tr></thead>
+                <tbody id="maintenance-table-body"></tbody>
+              </table>
+            </div>
+          </details>
+
+          <details class="source-disclosure">
+            <summary><span>Vérifications recommandées avant intégration</span><span class="disclosure-mark" aria-hidden="true">+</span></summary>
+            <ol class="source-list" id="checks-list"></ol>
+          </details>
+
+          <details class="source-disclosure">
+            <summary><span>Arborescence suggérée</span><span class="disclosure-mark" aria-hidden="true">+</span></summary>
+            <p class="disclosure-intro" id="directory-tree-intro"></p>
+            <pre class="directory-tree" id="directory-tree"></pre>
+          </details>
+
+          <p class="maintenance-note" id="maintenance-note"></p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="content-width site-footer__inner">
+        <a class="brand brand--footer" href="#top"><span class="brand__name">noto<span> / références</span></span></a>
+        <p>Le Markdown source reste la référence ; cette page en est la présentation statique, sans backend ni dépendance externe.</p>
+        <a href="https://github.com/JCVERSA/noto/blob/main/ANDROID-ADB-REFERENCES.md" target="_blank" rel="noopener noreferrer">Ouvrir la source <span aria-hidden="true">↗</span></a>
+      </div>
+    </footer>
+
+    <noscript>
+      <p class="noscript-message">JavaScript doit être activé pour rechercher et filtrer le catalogue. Le fichier source reste disponible sur <a href="https://github.com/JCVERSA/noto/blob/main/ANDROID-ADB-REFERENCES.md">GitHub</a>.</p>
+    </noscript>
+  </body>
+</html>
