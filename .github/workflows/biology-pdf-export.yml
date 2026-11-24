@@ -1,6 +1,7 @@
 name: Temporary Biology PDF recovery
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - temp/biology-pdf-recovery
