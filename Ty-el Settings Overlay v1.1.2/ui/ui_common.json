@@ -1,0 +1,26 @@
+{
+  "dropdown/dropdown_content": {
+    "prevent_touch_input": true
+  },
+
+  "text_edit_box_scrolling_content": {
+    "prevent_touch_input": true
+  },
+
+  "scrolling_panel_base": {
+    "prevent_touch_input": true
+  },
+
+  "safe_zone_stack": {
+    "visible": "$safezone_buffer_visible",
+    "$safezone_buffer_visible|default": true
+  },
+
+  "input_panel": {
+    "prevent_touch_input": true
+  },
+
+  "inventory_screen_common": {
+    "force_render_below": true
+  }
+}

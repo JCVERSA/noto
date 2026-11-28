@@ -1,0 +1,13 @@
+menu.enableOverlay=Abilita sovrapposizione impostazioni	#
+options.hudOverlayEnabled.toastMessage=Sovrapposizione impostazioni abilitato riuscito!	#
+
+options.quickSettings=Impostazioni rapide	#
+options.showSettings=Mostra impostazioni	#
+
+options.spectatorModeUsageWarning.title=Modalità spettatore: leggere prima di continuare	#
+options.spectatorModeUsageWarning.body=Sei in modalità spettatore. Non sarai in grado di interagire con alcun elemento/opzione nelle Impostazioni o nella Sovrapposizione impostazioni direttamente sull'HUD. Sfortunatamente questo è un bug di gioco non risolvibile. Per uscire dalla modalità spettatore, se disponi delle autorizzazioni, prova uno dei seguenti passaggi:	#
+options.spectatorModeUsageWarning.body.item1=+ Apri la schermata di pausa e tocca il pulsante Esci nella parte superiore dello schermo.	#
+options.spectatorModeUsageWarning.body.item2=+ Apri la chat e digita §l"/gamemode default @s"§r.	#
+options.spectatorModeUsageWarning.body.item3=+ Disattiva il pacchetto Settings Overlay e imposta manualmente una modalità di gioco diversa in un secondo momento.	#
+options.spectatorModeUsageWarning.body.dismiss=Premi "Ignora" per chiudere questa finestra di dialogo, se non puoi chiudere questa finestra di dialogo o se non vuoi visualizzarla di nuovo, apri il file /ui/_global_variables.json e imposta "$disable_spectator_mode_dialog" su §ltrue§r.	#
+options.spectatorModeUsageWarning.dismiss=Ignora	#

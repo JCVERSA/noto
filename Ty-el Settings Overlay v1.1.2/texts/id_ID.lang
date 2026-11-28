@@ -1,0 +1,13 @@
+menu.enableOverlay=Aktifkan Hamparan Pengaturan	#
+options.hudOverlayEnabled.toastMessage=Hamparan Pengaturan berhasil diaktifkan!	#
+
+options.quickSettings=Pengaturan Cepat	#
+options.showSettings=Tampilkan Pengaturan	#
+
+options.spectatorModeUsageWarning.title=Mode Penonton: Baca Sebelum Melanjutkan	#
+options.spectatorModeUsageWarning.body=Anda berada dalam Mode Penonton. Anda tidak akan dapat berinteraksi dengan elemen/opsi apa pun di Pengaturan atau Hamparan Pengaturan secara langsung di HUD. Sayangnya ini adalah bug game yang tidak dapat diperbaiki. Untuk keluar dari Mode Penonton, jika Anda memiliki izin, coba salah satu langkah berikut ini:	#
+options.spectatorModeUsageWarning.body.item1=+ Buka Jeda Layar dan ketuk tombol Melarikan diri di bagian atas layar.	#
+options.spectatorModeUsageWarning.body.item2=+ Buka obrolan dan ketik §l"/gamemode default @s"§r.	#
+options.spectatorModeUsageWarning.body.item3=+ Nonaktifkan paket Settings Overlay dan atur secara manual ke mode permainan lain nanti.	#
+options.spectatorModeUsageWarning.body.dismiss=Tekan "Membubarkan" untuk menutup dialog ini, jika Anda tidak dapat menutup dialog ini, atau jika Anda tidak ingin melihat dialog ini lagi, buka file /ui/_global_variables.json dan setel "$disable_spectator_mode_dialog" ke §ltrue§r.	#
+options.spectatorModeUsageWarning.dismiss=Membubarkan	#

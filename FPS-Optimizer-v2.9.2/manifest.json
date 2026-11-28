@@ -1,0 +1,197 @@
+{
+  "format_version": 3,
+  "header": {
+    "name": "§l§6FPS Optimizer §r§f| §aFPS Boost Official §7v2.9.2",
+    "description": "§fUltra-lightweight FPS boost that keeps the classic look.§r\n§7• Eleven controls in the §fgear§7 menu • Full 89-biome fog, zero volumetric cost\n§7• Durability HUD + numbered hotbar built in\n§7• Blocky Vibrant Visuals shadows, no VV water caustics§r",
+    "uuid": "e91c26fe-bbe0-4d14-86a0-b7282d17e040",
+    "version": "2.9.2",
+    "min_engine_version": "1.26.40"
+  },
+  "modules": [
+    {
+      "description": "FPS Optimizer — Core resources",
+      "type": "resources",
+      "uuid": "11fbf690-57d7-43fe-ad0e-dab0933d7496",
+      "version": "2.9.2"
+    }
+  ],
+  "capabilities": [
+    "pbr"
+  ],
+  "subpacks": [
+    {
+      "folder_name": "max_fps",
+      "name": "§cMax FPS §7- Low Chunk Fog + Removes ALL Particles",
+      "memory_performance_tier": 1
+    },
+    {
+      "folder_name": "default",
+      "name": "§aDefault §7- Clear Fog + Removes 48 Heavy Particles",
+      "memory_performance_tier": 2
+    }
+  ],
+  "settings": [
+    {
+      "type": "label",
+      "text": "§l§6FPS Optimizer \n§7Eleven controls, no reinstall. Everything here applies in §fboth§7 subpacks.§r"
+    },
+    {
+      "type": "label",
+      "text": "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n§l§ePARTICLE VOLUME§r"
+    },
+    {
+      "type": "slider",
+      "text": "Particle Amount §7(%)§r",
+      "name": "opt:particle_amount",
+      "min": 0,
+      "max": 100,
+      "step": 10,
+      "default": 100
+    },
+    {
+      "type": "label",
+      "text": "§7Scales how many particles every effect below §fspawns§7. §f100§7 is vanilla, §f0§7 is none.§r"
+    },
+    {
+      "type": "slider",
+      "text": "Burst Limit",
+      "name": "opt:burst_limit",
+      "min": 4,
+      "max": 32,
+      "step": 4,
+      "default": 32
+    },
+    {
+      "type": "label",
+      "text": "§7A hard ceiling on any single effect, applied §fafter§7 the slider above. Most effects spawn 1-5 and never reach it — this exists for splash potions, which throw §f30§7 at once.§r\n§f32§7 = nothing capped. Drop to §f8§7 to flatten the spikes.§r"
+    },
+    {
+      "type": "label",
+      "text": "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n§l§eEFFECTS§r"
+    },
+    {
+      "type": "toggle",
+      "text": "Potion Effects",
+      "name": "opt:potion_effects",
+      "default": true
+    },
+    {
+      "type": "label",
+      "text": "§7Swirls on you and on mobs, splash potions and lingering clouds.§r"
+    },
+    {
+      "type": "toggle",
+      "text": "Witch & Evoker Magic",
+      "name": "opt:witch_evoker",
+      "default": true
+    },
+    {
+      "type": "label",
+      "text": "§7Witch brewing puffs and evoker spell casts. Worth cutting for raids.§r"
+    },
+    {
+      "type": "toggle",
+      "text": "Arrow Trails",
+      "name": "opt:arrow_trails",
+      "default": true
+    },
+    {
+      "type": "label",
+      "text": "§7The trail behind tipped arrows. Heavy in PvP and skeleton fights.§r"
+    },
+    {
+      "type": "toggle",
+      "text": "Cauldron Effects",
+      "name": "opt:cauldron",
+      "default": true
+    },
+    {
+      "type": "label",
+      "text": "§7Drips and splashes around filled cauldrons.§r"
+    },
+    {
+      "type": "toggle",
+      "text": "Geysers",
+      "name": "opt:geysers",
+      "default": true
+    },
+    {
+      "type": "label",
+      "text": "§7Geyser columns, plumes and puffs. Max FPS removes these outright.§r"
+    },
+    {
+      "type": "toggle",
+      "text": "Noxious Gas",
+      "name": "opt:noxious_gas",
+      "default": true
+    },
+    {
+      "type": "label",
+      "text": "§7Drifting gas clouds around geyser fields.§r"
+    },
+    {
+      "type": "toggle",
+      "text": "Sulfur Particles",
+      "name": "opt:sulfur",
+      "default": true
+    },
+    {
+      "type": "label",
+      "text": "§7Sulfur bubbles and cubes in sulfur caves.§r"
+    },
+    {
+      "type": "label",
+      "text": "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n§l§eENTITIES§r"
+    },
+    {
+      "type": "toggle",
+      "text": "Experience Orbs",
+      "name": "opt:xp_orbs",
+      "default": true
+    },
+    {
+      "type": "label",
+      "text": "§7Stops orbs drawing. They still work and are still collected — the biggest single gain at mob grinders.§r"
+    },
+    {
+      "type": "label",
+      "text": "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n§l§eRENDERING§r"
+    },
+    {
+      "type": "toggle",
+      "text": "Enchantment Glint",
+      "name": "opt:enchant_glint",
+      "default": true
+    },
+    {
+      "type": "label",
+      "text": "§7The shimmer on enchanted armor, shields, bows, crossbows and tridents is a §fsecond draw§7 of the same model. Off skips that pass on every player and mob in view — the gear still renders, only the glow goes. Biggest in PvP lobbies and at farms where every drop is enchanted.§r"
+    },
+    {
+      "type": "label",
+      "text": "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n§l§eALWAYS ON§r"
+    },
+    {
+      "type": "label",
+      "text": "§7Durability HUD, numbered hotbar, animated durability bars, 89-biome fog coverage, static block animations and blocky Vibrant Visuals shadows and caustics-free Vibrant Visuals water are built in and need no configuration.§r"
+    },
+    {
+      "type": "label",
+      "text": "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n§l§eSUBPACKS§r"
+    },
+    {
+      "type": "label",
+      "text": "§7Chosen in the list above, not here:§r\n§c▪ Max FPS §7— fog at 60 blocks, 177 effects removed\n§a▪ Default §7— fog past the horizon, 48 effects removed§r"
+    },
+    {
+      "type": "label",
+      "text": "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n§7Made by §l§6XiaoCraft§r§7.§r"
+    }
+  ],
+  "metadata": {
+    "authors": [
+      "XiaoCraft"
+    ],
+    "url": "https://www.curseforge.com/minecraft-bedrock/texture-packs/fps-optimizer-fps-boost"
+  }
+}

@@ -1,0 +1,98 @@
+// File made and modified by @tlgm2308 (Twitter).
+// Please respect my works ;-;, and do not use my code without permissions!
+// * Ty-el Settings Overlay v1.1.2 (103)-2024.10.31-1.20.40+
+
+// Here you can edit some settings to make your UI experience somehow better than ever!
+
+/* USAGE =============================================
+ONLY EDIT VARIABLE VALUES AFTER COLON, DO NOT EDIT OR DELETE ANYTHING ELSE,
+AND DO NOT DELETE ANY QUOTATION MARKS OR COMMAS (if available), OR THIS FILE WON'T BE LOADED AND PACK MAY BREAK!
+====================================================*/
+
+/* Legend: Variable formats
+  ? At the end of each variable there is a //<format> indicating which value format
+  ? you will need to apply, otherwise this file will break and may fail to load.
+
+  * bool: (boolean) either "true" or "false" (without quotation marks)
+  * float: a decimal number, for example: 16.8, 32.0 (with noted exceptions)
+  * pc_float: a percentual float number (between 0.00 ~ 1.00), example: 32% ==> 0.32
+  * anchor_string: only 9 following strings work:
+    ___________________________________________
+    top_left,     top_middle,     top_right
+    left_middle,  center,         right_middle,
+    bottom_left,  bottom_middle,  bottom_right
+    ___________________________________________
+  * vec2 (arr[x,y]): (2 values in a vector) you can use number or exact percentage (hard to explain),
+    (all values in vector must be inside two brackets)
+*/
+
+{
+  // PACK SETTINGS -------------------------------
+  // Enables "Escape Spectator Mode" functionality in Pause Screen,
+  // but you may experience more annoying and unwanted inputs, especially when Screen Animations are turned off.
+  // Recommended only when having Screen Animations turned on and acknowledged that your gameplay may get interrupted.
+  "$tyel_settings_overlay:allow_settings_overlay_always_accepts_input": false, //bool
+
+  // Do not show the "Spectator Mode: Read Before Continuing" dialog button once player enters Spectator Mode
+  "$tyel_settings_overlay:disable_spectator_mode_dialog": false, //bool
+
+  // FOV Quick Toggle customization (Only available in "[Experimental] FOV Quick Toggle" subpack)
+  // Must be between 30 and 110. Values not between this range will be capped.
+  // + Preferred Default FOV
+  "$tyel_settings_overlay:fov_quick_toggle_preferred_default_fov": 70.0, //float
+  // + Preferred Toggled FOV
+  "$tyel_settings_overlay:fov_quick_toggle_preferred_toggled_fov": 30.0, //float
+
+
+  // OVERLAY COMPONENTS CUSTOMIZATION ------------
+  // (advanced)
+  // Here you can customize sizes and offsets for both the perspective and more settings toggles as you need,
+  // because not every screen resolution is perfect(TM).
+
+  // Note: all anchor origins are ALWAYS inside Screen Safe Area.
+
+  // Camera Perspective Toggle
+  "$tyel_settings_overlay:perspective_toggle_size": [ 18, 18 ], //vec2
+  "$tyel_settings_overlay:perspective_toggle_anchor_from": "top_middle", //anchor_string
+  "$tyel_settings_overlay:perspective_toggle_anchor_to": "top_right", //anchor_string
+  "$tyel_settings_overlay:perspective_toggle_offset": [ -29, 1 ], //vec2
+  "$tyel_settings_overlay:perspective_toggle_alpha": 1.0, //pc_float
+
+  // FOV Quick Toggle
+  // (Only available in "[Experimental] FOV Quick Toggle" subpack)
+  "$tyel_settings_overlay:fov_quick_toggle_size": [ 18, 18 ],
+  "$tyel_settings_overlay:fov_quick_toggle_anchor_from": "top_middle",
+  "$tyel_settings_overlay:fov_quick_toggle_anchor_to": "top_right",
+  "$tyel_settings_overlay:fov_quick_toggle_offset": [ -48, 1 ],
+  "$tyel_settings_overlay:fov_quick_toggle_alpha": 1.0,
+
+  // More Options Toggle
+  "$tyel_settings_overlay:more_settings_toggle_size": [ 18, 18 ], //vec2
+  "$tyel_settings_overlay:more_settings_toggle_anchor_from": "top_middle", //anchor_string
+  "$tyel_settings_overlay:more_settings_toggle_anchor_to": "top_left", //anchor_string
+  "$tyel_settings_overlay:more_settings_toggle_offset": [ 29, 1 ], //vec2
+  "$tyel_settings_overlay:more_settings_toggle_alpha": 1.0, //pc_float
+
+  // Quick Settings Popup Panel
+  "$tyel_settings_overlay:quick_settings_panel_anchor_from": "top_middle", //anchor_string
+  "$tyel_settings_overlay:quick_settings_panel_anchor_to": "top_middle", //anchor_string
+  "$tyel_settings_overlay:quick_settings_panel_offset": [ 0, 24 ], //vec2
+  "$tyel_settings_overlay:quick_settings_panel_alpha": 1.0, //pc_float
+
+  // Escape Spectator Toggle
+  // (Only available when $tyel_settings_overlay:allow_settings_overlay_always_accepts_input is enabled)
+  "$tyel_settings_overlay:escape_spectator_toggle_size": [ 18, 18 ], //vec2
+  "$tyel_settings_overlay:escape_spectator_toggle_anchor_from": "top_middle", //anchor_string
+  "$tyel_settings_overlay:escape_spectator_toggle_anchor_to": "top_right", //anchor_string
+  "$tyel_settings_overlay:escape_spectator_toggle_offset": [ -29, 1 ], //vec2
+  "$tyel_settings_overlay:escape_spectator_toggle_alpha": 1.0, //pc_float
+
+
+
+  // Internal variable for debugging purposes only
+  "$override_touch_controls_required_restrictions": false,
+
+  // Internal variable for compatibility with other packs, do not change
+  "$is_tyel_settings_overlay": true,
+  "$tyel_settings_overlay:global_variables_file_version": 103
+}

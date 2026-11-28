@@ -1,0 +1,13 @@
+menu.enableOverlay=Aktiver Indstillinger Overlejring	#
+options.hudOverlayEnabled.toastMessage=Indstillinger Overlejring aktiveret!	#
+
+options.quickSettings=Hurtige indstillinger	#
+options.showSettings=Vis indstillinger	#
+
+options.spectatorModeUsageWarning.title=Tilskuer-tilstand: Læs før du fortsætter	#
+options.spectatorModeUsageWarning.body=Du er i tilskuer-tilstand. Du vil ikke være i stand til at interagere med nogen elementer/indstillinger i Indstillinger eller Indstillinger Overlejring direkte på HUD. Dette er desværre en spilfejl, der ikke kan rettes. For at afslutte Tilskuer-tilstand, hvis du har tilladelser, prøv et af disse følgende trin:	#
+options.spectatorModeUsageWarning.body.item1=+ Åbn pauseskærm, og tryk på Flugt-knappen øverst på skærmen.	#
+options.spectatorModeUsageWarning.body.item2=+ Åbn chat og skriv §l"/gamemode default @s"§r.	#
+options.spectatorModeUsageWarning.body.item3=+ Deaktiver Settings Overlay-pakken og indstil manuelt til en anden spiltilstand senere.	#
+options.spectatorModeUsageWarning.body.dismiss=Tryk på "Afskedige" for at lukke denne dialogboks, hvis du ikke kan lukke denne dialogboks, eller hvis du ikke ønsker at se denne dialogboks igen, skal du åbne filen /ui/_global_variables.json og indstille "$disable_spectator_mode_dialog" til §ltrue§r.	#
+options.spectatorModeUsageWarning.dismiss=Afskedige	#

@@ -1,0 +1,13 @@
+menu.enableOverlay=Povolit překrytí nastavení	#
+options.hudOverlayEnabled.toastMessage=Překrytí nastavení bylo úspěšně povoleno!	#
+
+options.quickSettings=Rychlé nastavení	#
+options.showSettings=Zobrazit nastavení	#
+
+options.spectatorModeUsageWarning.title=Režim diváka: Přečtěte si před pokračováním	#
+options.spectatorModeUsageWarning.body=Nacházíte se v režim diváka. Přímo na HUD nebudete moci pracovat s žádnými prvky/možnostmi v Nastavení nebo Překryvná nastavení. Toto je bohužel neopravitelná chyba hry. Chcete-li ukončit režim diváka, pokud máte oprávnění, vyzkoušejte některý z následujících kroků:	#
+options.spectatorModeUsageWarning.body.item1=+ Otevřete obrazovku Pozastavit a klepněte na tlačítko Escape v horní části obrazovky.	#
+options.spectatorModeUsageWarning.body.item2=+ Otevřete chat a zadejte §l„/gamemode default @s“§r.	#
+options.spectatorModeUsageWarning.body.item3=+ Deaktivujte balíček Settings Overlay a později ručně nastavte jiný herní režim.	#
+options.spectatorModeUsageWarning.body.dismiss=Stisknutím tlačítka "Zavrhnout" toto dialogové okno zavřete, pokud tento dialog nemůžete zavřít nebo pokud tento dialog nechcete znovu vidět, otevřete soubor /ui/_global_variables.json a nastavte "$disable_spectator_mode_dialog" na §ltrue§r.	#
+options.spectatorModeUsageWarning.dismiss=Zavrhnout	#

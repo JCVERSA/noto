@@ -1,0 +1,13 @@
+menu.enableOverlay=Instellingen-overlay inschakelen	#
+options.hudOverlayEnabled.toastMessage=Instellingen-overlay succesvol ingeschakeld!	#
+
+options.quickSettings=Snelle instellingen	#
+options.showSettings=Toon instellingen	#
+
+options.spectatorModeUsageWarning.title=Toeschouwermodus: Lees dit voordat u verdergaat	#
+options.spectatorModeUsageWarning.body=Je bevindt je in de toeschouwermodus. U kunt niet rechtstreeks op de HUD communiceren met elementen/opties in Instellingen of Instellingen-overlay. Dit is helaas een onherstelbare spelfout. Probeer een van de volgende stappen om de toeschouwermodus af te sluiten als je daarvoor toestemming hebt:	#
+options.spectatorModeUsageWarning.body.item1=+ Open het Pauzescherm en tik op de Ontsnappen-knop bovenaan het scherm.	#
+options.spectatorModeUsageWarning.body.item2=+ Opent u de chat en typt u §l"/gamemode default @s"§r.	#
+options.spectatorModeUsageWarning.body.item3=+ Deactiveert u het Settings Overlay-pakket en stelt u later handmatig een andere spelmodus in.	#
+options.spectatorModeUsageWarning.body.dismiss=Druk op "Afwijzen" om dit dialoogvenster te sluiten. Als u dit dialoogvenster niet kunt sluiten, of als u dit dialoogvenster niet opnieuw wilt zien, opent u het bestand /ui/_global_variables.json en stelt u "$disable_spectator_mode_dialog" in op §ltrue§r.	#
+options.spectatorModeUsageWarning.dismiss=Afwijzen	#

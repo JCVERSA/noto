@@ -1,0 +1,13 @@
+menu.enableOverlay=Активирайте наслагването на настройки	#
+options.hudOverlayEnabled.toastMessage=Наслагването на настройки е активирано успешно!	#
+
+options.quickSettings=Бързи настройки	#
+options.showSettings=Показване на настройки	#
+
+options.spectatorModeUsageWarning.title=Режим на зрител: Прочетете преди да продължите	#
+options.spectatorModeUsageWarning.body=Вие сте в режим на зрител. Няма да можете да взаимодействате с никакви елементи/опции в Настройки или Наслагване на настройки директно на HUD. За съжаление това е непоправима грешка в играта. За да излезете от режим на зрител, ако имате разрешения, опитайте някоя от следните стъпки:	#
+options.spectatorModeUsageWarning.body.item1=+ Отворете екрана за пауза и докоснете бутона Escape в горната част на екрана.	#
+options.spectatorModeUsageWarning.body.item2=+ Отворете чата и въведете §l„/gamemode default @s“§r.	#
+options.spectatorModeUsageWarning.body.item3=+ Деактивирайте Settings Overlay пакета и по-късно задайте ръчно различен режим на игра.	#
+options.spectatorModeUsageWarning.body.dismiss=Натиснете „Отхвърляне“, за да отхвърлите този диалогов прозорец, ако не можете да го отхвърлите или ако не искате да го виждате отново, отворете файла /ui/_global_variables.json и задайте „$disable_spectator_mode_dialog“ на §ltrue§r.	#
+options.spectatorModeUsageWarning.dismiss=Отхвърляне	#

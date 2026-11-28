@@ -1,0 +1,13 @@
+// File made and modified by @tlgm2308 (Twitter).
+// Please respect my works ;-;, and do not use my code without permissions!
+{
+  "namespace": "tyel_ui_metadata",
+
+  // Please do not modify this file, or this pack may break.
+  "tyel_ui_metadata": {
+    "$name": "The Ty-el's UI Pack",
+    "$version": "v1.2.5a (119)",
+    "$version_full": "v1.2.5a (119)-2025.8.26-(r1.21.101)",
+    "$global_variables_file_version": 117
+  }
+}

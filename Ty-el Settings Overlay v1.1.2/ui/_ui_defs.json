@@ -1,0 +1,8 @@
+{
+  "ui_defs": [
+    "ui/_tyel_settings_overlay__interactable_area_defs.json",
+    "ui/tyel_modules/tyel_settings_overlay/hud_overlay.json",
+    "ui/tyel_modules/tyel_settings_overlay/spectator_overlay.json",
+    "ui/tyel_modules/tyel_settings_overlay/_module_defs.json"
+  ]
+}

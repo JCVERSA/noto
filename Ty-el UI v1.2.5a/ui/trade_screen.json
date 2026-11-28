@@ -1,0 +1,15 @@
+{
+  "trade_panel": {
+    "$tyel_toggleable_hover_text_enabled": true,
+    "modifications": [
+      {
+        "control_name": "gamepad_helpers",
+        "operation": "remove"
+      }
+    ]
+  },
+
+  "trade_screen": {
+    "$screen_helpers_content": "common.common_inventory_screen_helpers"
+  }
+}

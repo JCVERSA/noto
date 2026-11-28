@@ -1,0 +1,13 @@
+menu.enableOverlay=Bật Lớp phủ cài đặt	#
+options.hudOverlayEnabled.toastMessage=Đã bật Lớp phủ cài đặt thành công!	#
+
+options.quickSettings=Cài đặt nhanh	#
+options.showSettings=Hiện cài đặt	#
+
+options.spectatorModeUsageWarning.title=Chế độ khán giả: Đọc trước khi tiếp tục	#
+options.spectatorModeUsageWarning.body=Bạn đang ở trong chế độ khán giả. Bạn sẽ không thể tương tác với bất kỳ mục hay nút nào trong phần cài đặt/lớp phủ cài đặt trực tiếp trên HUD. Đây thật không may là một lỗi không thể tránh khỏi. Để thoát chế độ khán giả, nếu bạn có quyền, hãy thử một trong các bước sau:	#
+options.spectatorModeUsageWarning.body.item1=+ Mở màn hình tạm dừng và nhấn nút Thoát ở phía trên của màn hình.	#
+options.spectatorModeUsageWarning.body.item2=+ Mở trò chuyện và nhập §l"/gamemode default @s"§r.	#
+options.spectatorModeUsageWarning.body.item3=+ Hủy kích hoạt gói Settings Overlay và đưa về chế độ chơi khác một cách thủ công sau.	#
+options.spectatorModeUsageWarning.body.dismiss=Nhấn "Bỏ qua" để đóng hộp thoại này, nếu bạn không thể bỏ qua hộp thoại này hoặc nếu bạn không muốn hiển thị lại hộp thoại này một lần nữa, hãy mở tệp /ui/_global_variables.json và đặt "$disable_spectator_mode_dialog" thành §ltrue§r.	#
+options.spectatorModeUsageWarning.dismiss=Bỏ qua	#

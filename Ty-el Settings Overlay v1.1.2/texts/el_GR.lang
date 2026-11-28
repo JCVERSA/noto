@@ -1,0 +1,13 @@
+menu.enableOverlay=Ενεργοποίηση επικάλυψης ρυθμίσεις	#
+options.hudOverlayEnabled.toastMessage=Η επικάλυψης ρυθμίσεις ενεργοποιήθηκε με επιτυχία!	#
+
+options.quickSettings=Γρήγορες ρυθμίσεις	#
+options.showSettings=Εμφάνιση ρυθμίσεων	#
+
+options.spectatorModeUsageWarning.title=Λειτουργία θεατή: Διαβάστε πριν συνεχίσετε	#
+options.spectatorModeUsageWarning.body=Βρίσκεστε σε λειτουργία θεατή. Δεν θα μπορείτε να αλληλεπιδράσετε με κανένα στοιχείο/επιλογή στις Ρυθμίσεις ή στην Επικάλυψης ρυθμίσεις απευθείας στο HUD. Αυτό είναι δυστυχώς ένα σφάλμα παιχνιδιού που δεν μπορεί να διορθωθεί. Για έξοδο από τη λειτουργία θεατή, εάν έχετε δικαιώματα, δοκιμάστε οποιοδήποτε από τα παρακάτω βήματα:	#
+options.spectatorModeUsageWarning.body.item1=+ Ανοίξτε την οθόνη Παύσης και πατήστε το κουμπί Διαφυγή στο επάνω μέρος της οθόνης.	#
+options.spectatorModeUsageWarning.body.item2=+ Ανοίξτε τη συνομιλία και πληκτρολογήστε §l"/gamemode default @s"§r.	#
+options.spectatorModeUsageWarning.body.item3=+ Απενεργοποιήστε το πακέτο Settings Overlay και ρυθμίστε χειροκίνητα σε διαφορετική λειτουργία παιχνιδιού αργότερα.	#
+options.spectatorModeUsageWarning.body.dismiss=Πατήστε "Απολύω" για να απορρίψετε αυτό το παράθυρο διαλόγου, εάν δεν μπορείτε να παραβλέψετε αυτό το παράθυρο διαλόγου ή εάν δεν θέλετε να δείτε ξανά αυτό το παράθυρο διαλόγου, ανοίξτε το αρχείο /ui/_global_variables.json και ορίστε το "$disable_spectator_mode_dialog" σε §ltrue§r.	#
+options.spectatorModeUsageWarning.dismiss=Απολύω	#

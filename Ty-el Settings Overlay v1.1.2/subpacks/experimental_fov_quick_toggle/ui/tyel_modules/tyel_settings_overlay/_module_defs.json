@@ -1,0 +1,7 @@
+{
+  "namespace": "tyel_settings_overlay__defs",
+
+  "defs": {
+    "$enable_fov_quick_toggle_feature": true
+  }
+}

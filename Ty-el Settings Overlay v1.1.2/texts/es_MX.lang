@@ -1,0 +1,13 @@
+menu.enableOverlay=Habilitar superposición de ajustes	#
+options.hudOverlayEnabled.toastMessage=¡Superposición de ajustes habilitada con éxito!	#
+
+options.quickSettings=Ajustes rápidos	#
+options.showSettings=Mostrar ajustes	#
+
+options.spectatorModeUsageWarning.title=Modo espectador: leer antes de continuar	#
+options.spectatorModeUsageWarning.body=Estás en modo espectador. No podrá interactuar con ningún elemento/opción en Ajustes o Superposición de ajustes directamente en HUD. Desafortunadamente, este es un error del juego que no se puede solucionar. Para salir del Modo Espectador, si tiene permisos, intente cualquiera de estos pasos siguientes:	#
+options.spectatorModeUsageWarning.body.item1=+ Abra la pantalla de pausa y toque el botón Escapar en la parte superior de la pantalla.	#
+options.spectatorModeUsageWarning.body.item2=+ Abre el chat y escribe §l"/gamemode default @s"§r.	#
+options.spectatorModeUsageWarning.body.item3=+ Desactive el paquete de Settings Overlay y configúrelo manualmente en un modo de juego diferente más adelante.	#
+options.spectatorModeUsageWarning.body.dismiss=Presione "Despedir" para cerrar este cuadro de diálogo. Si no puede cerrar este cuadro de diálogo o si no desea volver a verlo, abra el archivo /ui/_global_variables.json y establezca "$disable_spectator_mode_dialog" en §ltrue§r.	#
+options.spectatorModeUsageWarning.dismiss=Despedir	#

@@ -1,0 +1,44 @@
+{
+  "format_version": 2,
+  "header": {
+    "description": "v1.1.2 (103)-2024.10.31-1.20.40+\nBy @tlgm2308 (Twitter). Adds some magical screen properties to the in-game Settings Screen to get Camera Perspective toggle, FOV slider and Gamemode Switcher on HUD! §l§eOnly for devices having Touch Capabilities!§r Exclusive on §2MCPEDL.com§r!",
+    "name": "The Ty-el's Settings Overlay UI Pack",
+    "uuid": "39ff380a-9034-4718-80d8-b54408ca63c1",
+    "version": [ 1, 1, 2 ],
+    "min_engine_version": [ 1, 20, 40 ]
+  },
+  "modules": [
+    {
+      "description": "By @tlgm2308 (Twitter) ;-;",
+      "type": "resources",
+      "uuid": "a0ebdf9c-d5ee-4ea4-9eab-92739d2a599a",
+      "version": [ 1, 1, 2 ]
+    }
+  ],
+  "subpacks": [
+    {
+      "folder_name": "experimental_fov_quick_toggle",
+      "name": "§c[EXPERIMENTAL]§r FOV Quick Toggle",
+      "memory_tier": 0
+    },
+    {
+      "folder_name": "default",
+      "name": "Default",
+      "memory_tier": 0
+    }
+  ],
+  "metadata": {
+    "authors": [ "tlgm2308" ],
+    "license": "You are not allowed to use or claim any of my code and use as your own, or re-upload this pack to different sites, or review this pack but no credits or use different download links. You can open README.txt to read more."
+  },
+  "settings": [
+    {
+      "type": "label",
+      "text": "Subpack Information:"
+    },
+    {
+      "type": "label",
+      "text": "- §c[EXPERIMENTAL]§r FOV Quick Toggle: Adds the ability to quickly toggle between two FOV values based on your preferences in the _global_variables.json file. Note that this feature is experimental and §l§cmay cause your game to crash randomly!!!§r This is a rare and unwanted behavior and is hard to fix."
+    }
+  ]
+}

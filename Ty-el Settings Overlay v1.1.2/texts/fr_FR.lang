@@ -1,0 +1,13 @@
+menu.enableOverlay=Activer la superposition des paramètres	#
+options.hudOverlayEnabled.toastMessage=Superposition de paramètres activée avec succès!	#
+
+options.quickSettings=Paramètres rapides	#
+options.showSettings=Afficher les paramètres	#
+
+options.spectatorModeUsageWarning.title=Mode spectateur: à lire avant de continuer	#
+options.spectatorModeUsageWarning.body=Vous êtes en mode spectateur. Vous ne pourrez interagir avec aucun élément/option dans les paramètres ou la superposition de paramètres directement sur le HUD. Il s'agit malheureusement d'un bug du jeu non corrigible. Pour quitter le mode spectateur, si vous disposez d'autorisations, essayez l'une des étapes suivantes :	#
+options.spectatorModeUsageWarning.body.item1=+ Ouvrez l'écran Pause et appuyez sur le bouton Échapper en haut de l'écran.	#
+options.spectatorModeUsageWarning.body.item2=+ Ouvrez le chat et tapez §l"/gamemode default @s"§r.	#
+options.spectatorModeUsageWarning.body.item3=+ Désactivez le pack de Settings Overlay et définissez manuellement un mode de jeu différent ultérieurement.	#
+options.spectatorModeUsageWarning.body.dismiss=Appuyez sur "Rejeter" pour fermer cette boîte de dialogue. Si vous ne pouvez pas fermer cette boîte de dialogue ou si vous ne souhaitez plus voir cette boîte de dialogue, ouvrez le fichier /ui/_global_variables.json et définissez "$disable_spectator_mode_dialog" sur §ltrue§r.	#
+options.spectatorModeUsageWarning.dismiss=Rejeter	#

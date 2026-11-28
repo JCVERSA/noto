@@ -1,0 +1,13 @@
+menu.enableOverlay=설정 오버레이 활성화	#
+options.hudOverlayEnabled.toastMessage=설정 오버레이가 활성화되었습니다!	#
+
+options.quickSettings=빠른 설정	#
+options.showSettings=설정 표시	#
+
+options.spectatorModeUsageWarning.title=관전 모드: 잠깐! 계속하기 전에 읽어보세요	#
+options.spectatorModeUsageWarning.body=관전 모드에서는 설정 또는 설정 오버레이와 상호 작용할 수 없게 됩니다. 이는 게임의 버그로 인해 발생하는 현상으로, 리소스 팩으로 해결할 수 없는 버그입니다. 명령어를 사용할 수 있다면 다음 방법을 통해 관전 모드를 종료할 수 있습니다:	#
+options.spectatorModeUsageWarning.body.item1=+ 일시 정지 화면을 열고 화면 상단의 버튼을 누르세요.	#
+options.spectatorModeUsageWarning.body.item2=+ 채팅을 열고 §l'/gamemode default @s'§r를 입력하세요.	#
+options.spectatorModeUsageWarning.body.item3=+ 팩을 비활성화하고 수동으로 게임 모드를 전환하세요.	#
+options.spectatorModeUsageWarning.body.dismiss=이 대화 상자를 닫을 수 없거나 대화 상자를 비활성화하려면 /ui/_global_variables.json 파일을 열고 "$disable_spectator_mode_dialog"를 §ltrue§r로 설정하세요.	#
+options.spectatorModeUsageWarning.dismiss=닫기	#

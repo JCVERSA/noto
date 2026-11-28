@@ -1,0 +1,194 @@
+{
+   "content" : [
+      {
+         "path" : ".mcattributes"
+      },
+      {
+         "path" : "texts/it_IT.lang"
+      },
+      {
+         "path" : "texts/id_ID.lang"
+      },
+      {
+         "path" : "subpacks/default/empty.txt"
+      },
+      {
+         "path" : "Changelog.txt"
+      },
+      {
+         "path" : "texts/fr_FR.lang"
+      },
+      {
+         "path" : "pack_icon.png"
+      },
+      {
+         "path" : "textures/ui/tyel_settings_overlay/fov_quick_toggle_button_icon.png"
+      },
+      {
+         "path" : "contents.json"
+      },
+      {
+         "path" : "textures/ui/tyel_settings_overlay/escape_spectator_button_icon.png"
+      },
+      {
+         "path" : "ui/_ui_defs.json"
+      },
+      {
+         "path" : "texts/zh_TW.lang"
+      },
+      {
+         "path" : "texts/nb_NO.lang"
+      },
+      {
+         "path" : "manifest.json"
+      },
+      {
+         "path" : "ui/tyel_modules/tyel_settings_overlay/spectator_overlay.json"
+      },
+      {
+         "path" : "texts/nl_NL.lang"
+      },
+      {
+         "path" : "README.txt"
+      },
+      {
+         "path" : "ui/settings_sections/settings_common.json"
+      },
+      {
+         "path" : "ui/settings_screen.json"
+      },
+      {
+         "path" : "subpacks/experimental_fov_quick_toggle/ui/tyel_modules/tyel_settings_overlay/_module_defs.json"
+      },
+      {
+         "path" : "textures/ui/tyel_settings_overlay/thirdperson_front_button_icon.png"
+      },
+      {
+         "path" : "texts/bg_BG.lang"
+      },
+      {
+         "path" : "texts/vi_VN.lang"
+      },
+      {
+         "path" : "texts/cs_CZ.lang"
+      },
+      {
+         "path" : "textures/ui/tyel_settings_overlay/gui_button_bg_entry.png"
+      },
+      {
+         "path" : "texts/pt_PT.lang"
+      },
+      {
+         "path" : "texts/da_DK.lang"
+      },
+      {
+         "path" : "texts/de_DE.lang"
+      },
+      {
+         "path" : "ui/tyel_modules/tyel_settings_overlay/_module_defs.json"
+      },
+      {
+         "path" : "texts/fi_FI.lang"
+      },
+      {
+         "path" : "texts/el_GR.lang"
+      },
+      {
+         "path" : "textures/ui/tyel_settings_overlay/quick_settings_background.png"
+      },
+      {
+         "path" : "texts/en_UK.lang"
+      },
+      {
+         "path" : "textures/ui/tyel_settings_overlay/thirdperson_first_button_icon.png"
+      },
+      {
+         "path" : "texts/en_US.lang"
+      },
+      {
+         "path" : "ui/pause_screen.json"
+      },
+      {
+         "path" : "texts/pl_PL.lang"
+      },
+      {
+         "path" : "texts/es_ES.lang"
+      },
+      {
+         "path" : "texts/es_MX.lang"
+      },
+      {
+         "path" : "texts/fr_CA.lang"
+      },
+      {
+         "path" : "texts/hu_HU.lang"
+      },
+      {
+         "path" : "texts/ja_JP.lang"
+      },
+      {
+         "path" : "texts/ko_KR.lang"
+      },
+      {
+         "path" : "ui/tyel_modules/tyel_settings_overlay/hud_overlay.json"
+      },
+      {
+         "path" : "texts/pt_BR.lang"
+      },
+      {
+         "path" : "texts/ru_RU.lang"
+      },
+      {
+         "path" : "ui/ui_template_toggles.json"
+      },
+      {
+         "path" : "texts/tr_TR.lang"
+      },
+      {
+         "path" : "texts/sk_SK.lang"
+      },
+      {
+         "path" : "texts/sv_SE.lang"
+      },
+      {
+         "path" : "texts/uk_UA.lang"
+      },
+      {
+         "path" : "ui/_global_variables.json"
+      },
+      {
+         "path" : "texts/zh_CN.lang"
+      },
+      {
+         "path" : "textures/ui/tyel_settings_overlay/back_to_hud_button_icon.png"
+      },
+      {
+         "path" : "textures/ui/tyel_settings_overlay/gamemode_switcher_selected.png"
+      },
+      {
+         "path" : "textures/ui/tyel_settings_overlay/more_settings_button_arrow_icon.png"
+      },
+      {
+         "path" : "textures/ui/tyel_settings_overlay/gamemode_switcher_unselected.png"
+      },
+      {
+         "path" : "textures/ui/tyel_settings_overlay/quick_settings_background.json"
+      },
+      {
+         "path" : "textures/ui/tyel_settings_overlay/thirdperson_back_button_icon.png"
+      },
+      {
+         "path" : "ui/ui_common.json"
+      },
+      {
+         "path" : "ui/hud_screen.json"
+      },
+      {
+         "path" : "ui/popup_dialog.json"
+      },
+      {
+         "path" : "ui/_tyel_settings_overlay__interactable_area_defs.json"
+      }
+   ],
+   "version" : 1
+}

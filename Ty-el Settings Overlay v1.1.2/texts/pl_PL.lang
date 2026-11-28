@@ -1,0 +1,13 @@
+menu.enableOverlay=Włącz ustawienia nakładka	#
+options.hudOverlayEnabled.toastMessage=Ustawienia nakładka włączona pomyślnie!	#
+
+options.quickSettings=Szybkie ustawienia	#
+options.showSettings=Pokaż ustawienia	#
+
+options.spectatorModeUsageWarning.title=Tryb widza: Przeczytaj przed kontynuowaniem	#
+options.spectatorModeUsageWarning.body=Jesteś w trybie widza. Nie będziesz mógł wchodzić w interakcję z żadnymi elementami/opcjami w Ustawieniach ani Ustawienia nakładka bezpośrednio na HUD-ie. Jest to niestety błąd gry, którego nie da się naprawić. Aby wyjść z trybu widza, jeśli masz uprawnienia, spróbuj wykonać którykolwiek z poniższych kroków:	#
+options.spectatorModeUsageWarning.body.item1=+ Otwórz ekran pauzy i dotknij przycisku Ucieczka u góry ekranu.	#
+options.spectatorModeUsageWarning.body.item2=+ Otwórz czat i wpisz §l„/gamemode default @s”§r.	#
+options.spectatorModeUsageWarning.body.item3=+ Dezaktywuj pakiet Settings Overlay i ręcznie ustaw inny tryb gry później.	#
+options.spectatorModeUsageWarning.body.dismiss=Naciśnij „Odrzucać”, aby zamknąć to okno dialogowe. Jeśli nie możesz zamknąć tego okna dialogowego lub jeśli nie chcesz widzieć tego okna dialogowego ponownie, otwórz plik /ui/_global_variables.json i ustaw „$disable_spectator_mode_dialog” na §ltrue§r.	#
+options.spectatorModeUsageWarning.dismiss=Odrzucać	#
