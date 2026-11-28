@@ -1,0 +1,13 @@
+menu.enableOverlay=Enable Settings Overlay	#
+options.hudOverlayEnabled.toastMessage=Settings Overlay enabled successfully!	#
+
+options.quickSettings=Quick Settings	#
+options.showSettings=Show Settings	#
+
+options.spectatorModeUsageWarning.title=Spectator Mode: Read Before Continuing	#
+options.spectatorModeUsageWarning.body=You are in Spectator Mode. You won't be able to interact with any elements/options in Settings or Settings Overlay directly on HUD. This is unfortunately an unfixable game bug. To exit Spectator Mode, if you have permissions, try any of these following steps:	#
+options.spectatorModeUsageWarning.body.item1=+ Open Pause Screen and tap the Escape button at the top of the screen.	#
+options.spectatorModeUsageWarning.body.item2=+ Open chat and type §l"/gamemode default @s"§r.	#
+options.spectatorModeUsageWarning.body.item3=+ Deactivate the Settings Overlay pack and manually set to a different game mode later.	#
+options.spectatorModeUsageWarning.body.dismiss=Press "Dismiss" to close this dialog, if you can't dismiss this dialog, or if you don't want to see this dialog again, open the /ui/_global_variables.json file and set "$disable_spectator_mode_dialog" to §ltrue§r.	#
+options.spectatorModeUsageWarning.dismiss=Dismiss	#

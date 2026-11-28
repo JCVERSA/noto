@@ -1,0 +1,13 @@
+menu.enableOverlay=Ota Asetukset-peittokuvassa	#
+options.hudOverlayEnabled.toastMessage=Asetukset-peittokuvassa käyttöönotto onnistui!	#
+
+options.quickSettings=Pika-asetukset	#
+options.showSettings=Näytä asetukset	#
+
+options.spectatorModeUsageWarning.title=Katselijatila: Lue ennen kuin jatkat	#
+options.spectatorModeUsageWarning.body=Olet katselijatilassa. Et voi olla vuorovaikutuksessa Asetuksissa tai Asetukset-peittokuvassa olevien elementtien/vaihtoehtojen kanssa suoraan HUDissa. Tämä on valitettavasti korjaamaton pelivirhe. Jos sinulla on käyttöoikeudet poistuaksesi katselijatilasta, kokeile jotakin seuraavista vaiheista:	#
+options.spectatorModeUsageWarning.body.item1=+ Avaa Keskeytä-näyttö ja napauta näytön yläreunassa olevaa Paeta-painiketta.	#
+options.spectatorModeUsageWarning.body.item2=+ Avaa chat ja kirjoita §l"/gamemode default @s"§r.	#
+options.spectatorModeUsageWarning.body.item3=+ Poista Settings Overlay -paketti käytöstä ja aseta manuaalisesti toiseen pelitilaan myöhemmin.	#
+options.spectatorModeUsageWarning.body.dismiss=Sulje tämä valintaikkuna painamalla "Hylkää". Jos et voi hylätä tätä valintaikkunaa tai jos et halua nähdä tätä valintaikkunaa uudelleen, avaa /ui/_global_variables.json-tiedosto ja aseta "$disable_spectator_mode_dialog" arvoksi §ltrue§r.	#
+options.spectatorModeUsageWarning.dismiss=Hylkää	#

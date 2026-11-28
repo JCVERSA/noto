@@ -1,0 +1,13 @@
+menu.enableOverlay=Einstellungsüberlagerung aktivieren	#
+options.hudOverlayEnabled.toastMessage=Einstellungsüberlagerung erfolgreich aktiviert!	#
+
+options.quickSettings=Schnelleinstellungen	#
+options.showSettings=Einstellungen anzeigen	#
+
+options.spectatorModeUsageWarning.title=Zuschauermodus: Vor dem Fortfahren lesen	#
+options.spectatorModeUsageWarning.body=Sie befinden sich im Zuschauermodus. Sie können nicht direkt im HUD mit Elementen/Optionen in den Einstellungen oder im Einstellungsüberlagerung interagieren. Dies ist leider ein nicht behebbarer Spielfehler. Wenn Sie über die entsprechende Berechtigung verfügen, können Sie den Zuschauermodus mit einem der folgenden Schritte beenden:	#
+options.spectatorModeUsageWarning.body.item1=+ Öffnen Sie den Pausebildschirm und tippen Sie oben auf dem Bildschirm auf die Schaltfläche „Flucht“.	#
+options.spectatorModeUsageWarning.body.item2=+ Öffnen Sie den Chat und geben Sie §l„/gamemode default @s“§r ein.	#
+options.spectatorModeUsageWarning.body.item3=+ Deaktivieren Sie das Settings Overlay-Paket und stellen Sie es später manuell auf einen anderen Spielmodus ein.	#
+options.spectatorModeUsageWarning.body.dismiss=Klicken Sie auf „Zurückweisen“, um diesen Dialog zu schließen. Wenn Sie diesen Dialog nicht schließen können oder wenn Sie diesen Dialog nicht mehr sehen möchten, öffnen Sie die Datei /ui/_global_variables.json und setzen Sie „$disable_spectator_mode_dialog“ auf §ltrue§r.	#
+options.spectatorModeUsageWarning.dismiss=Zurückweisen	#

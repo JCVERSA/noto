@@ -1,0 +1,13 @@
+menu.enableOverlay=Ayarlar Yer Paylaşımını Etkinleştir	#
+options.hudOverlayEnabled.toastMessage=Ayarlar Yer Paylaşımı etkinleştirildi başarılı!	#
+
+options.quickSettings=Hızlı Ayarlar	#
+options.showSettings=Ayarları göster	#
+
+options.spectatorModeUsageWarning.title=İzleyici Modu: Devam Etmeden Önce Okuyun	#
+options.spectatorModeUsageWarning.body=İzleyici Modundasınız. Ayarlar'daki veya Ayarlar Yer Paylaşımı'ndaki hiçbir öğe/seçenek ile doğrudan HUD üzerinde etkileşimde bulunamayacaksınız. Bu ne yazık ki düzeltilemeyen bir oyun hatasıdır. İzinleriniz varsa İzleyici Modundan çıkmak için aşağıdaki adımlardan birini deneyin:	#
+options.spectatorModeUsageWarning.body.item1=+ Duraklatma Ekranını açın ve ekranın üst kısmındaki Kaçış düğmesine dokunun.	#
+options.spectatorModeUsageWarning.body.item2=+ Sohbeti açın ve yazın §l"/gamemode default @s"§r.	#
+options.spectatorModeUsageWarning.body.item3=+ Settings Overlay paketini devre dışı bırakın ve daha sonra manuel olarak farklı bir oyun moduna ayarlayın.	#
+options.spectatorModeUsageWarning.body.dismiss=Bu iletişim kutusunu kapatmak için "Azletmek"a basın, bu iletişim kutusunu kapatamıyorsanız veya bu iletişim kutusunu tekrar görmek istemiyorsanız /ui/_global_variables.json dosyasını açın ve "$disable_spectator_mode_dialog" değerini §ltrue§r olarak ayarlayın.	#
+options.spectatorModeUsageWarning.dismiss=Azletmek	#

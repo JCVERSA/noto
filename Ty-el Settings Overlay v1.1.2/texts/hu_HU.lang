@@ -1,0 +1,13 @@
+menu.enableOverlay=Beállítások fedvény engedélyezése	#
+options.hudOverlayEnabled.toastMessage=Beállítások fedvény sikeresen engedélyezve!	#
+
+options.quickSettings=Gyorsbeállítások	#
+options.showSettings=Beállítások megjelenítése	#
+
+options.spectatorModeUsageWarning.title=Néző mód: Olvassa el a folytatás előtt	#
+options.spectatorModeUsageWarning.body=Néző módban vagy. Nem tud majd közvetlenül a HUD-on kommunikálni a Beállítások vagy a Beállítások fedvény elemeivel/opcióival. Ez sajnos egy javíthatatlan játékhiba. A Néző módból való kilépéshez, ha rendelkezik jogosultságokkal, próbálkozzon az alábbi lépések valamelyikével:	#
+options.spectatorModeUsageWarning.body.item1=+ Nyissa meg a Szünet képernyőt, és érintse meg a Kilépés gombot a képernyő tetején.	#
+options.spectatorModeUsageWarning.body.item2=+ Nyissa meg a csevegést és írja be §l"/gamemode default @s"§r.	#
+options.spectatorModeUsageWarning.body.item3=+ Deaktiválja a Settings Overlay csomagot, és később manuálisan állítson be egy másik játékmódot.	#
+options.spectatorModeUsageWarning.body.dismiss=Nyomja meg az "Elvetés" gombot a párbeszédpanel bezárásához, ha nem tudja elvetni ezt a párbeszédpanelt, vagy ha nem szeretné újra látni ezt a párbeszédpanelt, nyissa meg a /ui/_global_variables.json fájlt, és állítsa a "$disable_spectator_mode_dialog" paramétert §ltrue§r értékre.	#
+options.spectatorModeUsageWarning.dismiss=Elvetés	#

@@ -1,0 +1,17 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.armor.leather": {
+      "geometry": "Geometry.default",
+      "materials": [
+        {
+          "*": "(variable.is_enchanted && query.is_pack_setting_enabled('opt:enchant_glint')) ? Material.enchanted : Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.default",
+        "Texture.enchanted"
+      ]
+    }
+  }
+}

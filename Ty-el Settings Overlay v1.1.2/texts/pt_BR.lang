@@ -1,0 +1,13 @@
+menu.enableOverlay=Ativar Sobreposição de Opções	#
+options.hudOverlayEnabled.toastMessage=Sobreposição de Opções ativada com sucesso!	#
+
+options.quickSettings=Opções rápidas	#
+options.showSettings=Mostrar Opções	#
+
+options.spectatorModeUsageWarning.title=Modo Espectador: Leia antes de continuar	#
+options.spectatorModeUsageWarning.body=Você está no modo espectador. Você não poderá interagir com nenhum elemento/opção em Opções ou Sobreposição de Opções diretamente no HUD. Infelizmente, este é um bug do jogo que não pode ser corrigido. Para sair do modo espectador, se você tiver permissões, tente qualquer uma destas etapas:	#
+options.spectatorModeUsageWarning.body.item1=+ Abra a tela de pausa e toque no botão Escapar na parte superior da tela.	#
+options.spectatorModeUsageWarning.body.item2=+ Abra o chat e digite §l"/gamemode default @s"§r.	#
+options.spectatorModeUsageWarning.body.item3=+ Desative o pacote de Settings Overlay e defina manualmente para um modo de jogo diferente posteriormente.	#
+options.spectatorModeUsageWarning.body.dismiss=Pressione "Liberar" para fechar esta caixa de diálogo, se você não puder descartar esta caixa de diálogo ou se não quiser ver esta caixa de diálogo novamente, abra o arquivo /ui/_global_variables.json e defina "$disable_spectator_mode_dialog" como §ltrue§r.	#
+options.spectatorModeUsageWarning.dismiss=Liberar	#

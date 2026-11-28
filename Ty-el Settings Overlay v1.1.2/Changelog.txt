@@ -1,0 +1,52 @@
+v1.1.2 (103)-2024.10.31-r1.20.40+ (Release Date: October 31st 2024)
+THE ZOOMIER ZOOM? UPDATE
+
+- NEW! Added an Experimental subpack "FOV Quick Toggle" that can be enabled in Pack Settings. This subpack adds the ability to quickly toggle between two FOV values based on your preferences in the _global_variables.json file. Note that this feature is experimental and may cause your game to crash randomly! This is a rare and unwanted behavior and is hard to fix.
+- NEW! Added a toast message to notice players that settings were changed (applies to FOV Quick Toggle and Camera Perspective Toggle).
+- NEW! Added the ability to add and customize Interactable Areas for "Ty-el Settings Overlay", useful when there are interactable buttons/elements on HUD but players can't interact with them while Settings Overlay is enabled. For advanced users/UI creators only. Customize it through the "/ui/_tyel_settings_overlay__interactable_area_defs.json" file.
+- Settings Overlay now opens even faster! Settings Screen content now only loads when it's actually visible on screen.
+- PACK BREAKING CHANGE: Updated all global variable names from "Ty-el Settings Overlay" to have "tyel_settings_overlay:" prepended.
+- Improved compatibility with "Ty-el UI" (requires Ty-el UI v1.2.1 or higher) through the "Interactable Area" integration.
+- Fixed some content log errors that was introduced in Minecraft v1.21.0+.
+- Reformatted overall pack file structure.
+- Various bug fixes.
+
+============================================================
+
+
+v1.1.1 (102)-2024.2.29-r1.20.40+ (Release Date: February 29th 2024)
+THE "THIS IS GOOD FOR REALMS." UPDATE
+
+- Realm owners can use Settings Overlay properly now!
+- NEW! You can now resize and move Settings Overlay buttons to anywhere you want! Check the _global_variables.json file inside the "ui" folder of the pack for more info!
+- Added "$is_tyel_settings_overlay" global variable for compatibility with other packs if needed.
+- Added "$disable_spectator_mode_dialog" global variable, set this to "true" will permanently hide the "Spectator Mode: Read Before Continuing" dialog, only set this variable to "true" if players can't interact with the "Dismiss" button in the "Spectator Mode: Read Before Continuing" dialog or don't want to see that dialog again.
+- Settings Screens won't be shown if there is another screen visible on top anymore.
+- Added an instruction to the "Spectator Mode: Read Before Continuing" dialog on how to dismiss the dialog.
+- Various translation changes for Chinese (Simplified) (Thanks, niganma (Discord)!) and Ukrainian (Thanks, uacreeper (Discord)!).
+
+============================================================
+
+
+v1.1.0 (101)-2023.10.31-r1.20.40+ (Release Date: November 2nd 2023)
+THE LEGENDARY COMEBACK UPDATE!
+
+It was just 10 days to turn the old Settings Overlay pack (v1.0.0) from usable to completely unusable in the latest stable version (which was the version 1.19.10), and I was suffered that, why it broke so quickly... After a little more than a year later since the initial release, version 1.20.40 of Minecraft introduced the “Customizable Controls (Experimental)” feature for Touch controls. It changed a lot of touch settings and realized that the tiny issue in pause screen I see every day, is gone. And I suddenly revisited the abandoned Settings Overlay pack, with some small changes, it surprisingly worked again! And that's why this update is here, with even more quality-of-life features, and bug fixes!
+
+- Retextured all custom Settings Overlay buttons to match all other top buttons' new look and feel.
+- NEW! Quick Settings menu, which replaced the Show Settings and Close Settings Overlay buttons, but both buttons are moved to the bottom of the Quick Settings menu, and, there's more…
+  + NEW! Gamemode Switcher, similar to the same Gamemode Switcher (F3+F4 menu) on Minecraft Java.
+  + NEW! FOV slider, it's ZOOM slider but on bedrock!
+  + NEW! Content Log History button, good for content creators to debug!
+- I'm glad to say that Settings Overlay now works on any touch control modes, yes, finally, you can now enjoy Settings Overlay on any of your preferred control modes!
+- Reduced the time to load Settings Overlay by adding just a little tweak to screen properties!
+- Settings screen content toggle now works on safe zone areas.
+- You can now interact with the original Settings screen without interacting with the world in the background, but it's still bugged when interacting with dropdown backgrounds, please note that in order to close dropdowns, you need to press an item on it, and not their background.
+- Fixed a crash that could occur when using Settings Overlay on Realms (hopefully)
+- Further optimized in codes and performances, it feels more stable now.
+
+============================================================
+
+
+v1.0.0 (Release Date: June 23rd 2022):
+Initial Release.

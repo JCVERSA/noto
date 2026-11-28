@@ -1,0 +1,13 @@
+menu.enableOverlay=启用设置覆盖	#
+options.hudOverlayEnabled.toastMessage=设置覆盖启用成功！	#
+
+options.quickSettings=快速设置	#
+options.showSettings=显示设置	#
+
+options.spectatorModeUsageWarning.title=旁观者模式：继续使用之前请先阅读	#
+options.spectatorModeUsageWarning.body=您处于旁观者模式。 您将无法直接在 HUD 上与“设置”或“设置叠加”中的任何元素/选项进行交互。 不幸的是，这是一个无法修复的游戏错误。 要退出旁观者模式，如果您有权限，请尝试以下任一步骤：	#
+options.spectatorModeUsageWarning.body.item1=+ 打开暂停屏幕并点击屏幕顶部的退出按钮。	#
+options.spectatorModeUsageWarning.body.item2=+ 打开聊天并输入§l“/gamemode default @s”§r。	#
+options.spectatorModeUsageWarning.body.item3=+ 停用设置覆盖包并手动设置为不同的游戏模式。	#
+options.spectatorModeUsageWarning.body.dismiss=按“忽略”关闭此对话框，如果您无法关闭此对话框，或者不想再次看到此对话框，请打开 /ui/_global_variables.json 文件并将“$disable_spectator_mode_dialog”设置为§ltrue§r。	#
+options.spectatorModeUsageWarning.dismiss=忽略	#

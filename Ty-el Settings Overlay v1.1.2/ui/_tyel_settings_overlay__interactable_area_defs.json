@@ -1,0 +1,74 @@
+// File made and modified by @tlgm2308 (Twitter).
+// Please respect my works ;-;, and do not use my code without permissions!
+// * Ty-el Settings Overlay v1.1.2 (103)-2024.10.31-1.20.40+
+
+// ==========================================
+// ADVANCED USERS/UI CREATORS ONLY!
+// Add and customize interactable touch areas, useful when
+// there are custom buttons/controls on HUD
+// ==========================================
+{
+  "namespace": "tyel_settings_overlay__interactable_area_defs",
+
+  // Initial call, it's recommended to use "modifications" instead of overriding this entire control!
+  "interactable_area_defs": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "$interactable_area": "tyel_settings_overlay__interactable_area_defs.custom_interactable_area",
+    "controls": [
+      {
+        // Example custom interactable area:
+        "hotbar_area@$interactable_area": {
+          //"ignored": "($pocket_screen)", // optional
+          "size": [ "100%", 24 ],
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "offset": [ 0, 0 ],
+          "bindings": [
+            // your optional custom bindings here
+            // (Only bindings from settings are supported)
+          ]
+        }
+      }
+    ]
+  },
+
+  // Example UI element modifications, should be used as separate packs
+  // and "Ty-el Settings Overlay" should be placed lower than those packs.
+  /*"interactable_area_defs": {
+    "$interactable_area": "tyel_settings_overlay__interactable_area_defs.custom_interactable_area",
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_back",
+        "value": [
+          {
+            "my_custom_hud_button@$interactable_area": {
+              "ignored": "($pocket_screen)", // optional
+              "size": [ "25%y", "16%" ],
+              "anchor_from": "top_right",
+              "anchor_to": "top_right",
+              "offset": [ 20, 10 ],
+              "bindings": [
+                // your optional custom bindings here
+                // (Only bindings from settings are supported)
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },*/
+
+  // Do not modify or remove this control!
+  "custom_interactable_area": {
+    "type": "input_panel",
+    "focus_enabled": false,
+    "focus_wrap_enabled": false,
+    "focus_magnet_enabled": false,
+    "prevent_touch_input": true,
+    "tts_ignore_count": true,
+    "tts_skip_message": true,
+    "tts_inherit_siblings": true
+  }
+}

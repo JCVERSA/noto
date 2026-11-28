@@ -1,0 +1,109 @@
+{
+  "empty_content_toggle@common.toggle": {
+    "$unchecked_control|default": "common.empty_panel",
+    "$checked_control|default": "common.empty_panel",
+    "$unchecked_hover_control|default": "common.empty_panel",
+    "$checked_hover_control|default": "common.empty_panel",
+    "$unchecked_locked_control|default": "common.empty_panel",
+    "$unchecked_locked_hover_control|default": "common.empty_panel",
+    "$checked_locked_control|default": "common.empty_panel",
+    "$checked_locked_hover_control|default": "common.empty_panel"
+  },
+
+  "transparent_background_content_toggle@common_toggles.light_content_toggle": {
+    "$default_texture": "",
+    "$hover_texture": "",
+    "$pressed_texture": "",
+    "$pressed_no_hover_texture": "",
+    "$locked_texture": "",
+    "$default_border_visible": false,
+    "$hover_border_visible": false
+  },
+
+  "gamemode_switcher_radio_toggle_template@common.radio_toggle": {
+    "size": [ 26, 26 ],
+    "$radio_toggle_group": true,
+
+    "$unchecked_control": "common_toggles.gamemode_switcher_radio_background_unchecked",
+    "$checked_control": "common_toggles.gamemode_switcher_radio_background_checked",
+    "$unchecked_hover_control": "common_toggles.gamemode_switcher_radio_background_unchecked_hovered",
+    "$checked_hover_control": "common_toggles.gamemode_switcher_radio_background_checked_hovered",
+    "$unchecked_locked_control": "common_toggles.gamemode_switcher_radio_background_unchecked_locked",
+    "$unchecked_locked_hover_control": "common_toggles.gamemode_switcher_radio_background_unchecked_locked",
+    "$checked_locked_control": "common_toggles.gamemode_switcher_radio_background_checked_locked",
+    "$checked_locked_hover_control": "common_toggles.gamemode_switcher_radio_background_checked_locked"
+  },
+
+  "gamemode_switcher_radio_background_unchecked": {
+    "type": "image",
+    "texture": "textures/ui/tyel_settings_overlay/gamemode_switcher_unselected",
+    "size": [ 26, 26 ],
+    "$border_visible|default": false,
+    "$hover_text_visible|default": false,
+    "$pressed_state|default": false,
+    "controls": [
+      {
+        "gamemode_switcher_selected_image": {
+          "type": "image",
+          "texture": "textures/ui/tyel_settings_overlay/gamemode_switcher_selected",
+          "size": [ 26, 26 ],
+          "visible": "$pressed_state"
+        }
+      },
+      {
+        "focus_border@common.focus_border_white": {
+          "visible": "$border_visible"
+        }
+      },
+      {
+        "hover_text_image_panel": {
+          "visible": "$hover_text_visible",
+          "type": "image",
+          "texture": "textures/ui/purpleBorder",
+          "size": [ "100%c + 8px", "100%c + 6px" ],
+          "layer": 100,
+          "anchor_from": "center",
+          "anchor_to": "left_middle",
+          "offset": [ 8, 2 ],
+          "$toggle_tts_header|default": "",
+          "controls": [
+            {
+              "hover_text": {
+                "type": "label",
+                "text": "$toggle_tts_header",
+                "shadow": false,
+                "color": "$item_hover_text_color",
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [ 5, 3 ],
+                "layer": 1
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "gamemode_switcher_radio_background_checked@common_toggles.gamemode_switcher_radio_background_unchecked": {
+    "$pressed_state": true
+  },
+
+  "gamemode_switcher_radio_background_unchecked_hovered@common_toggles.gamemode_switcher_radio_background_unchecked": {
+    "$border_visible": true,
+    "$hover_text_visible": true
+  },
+
+  "gamemode_switcher_radio_background_checked_hovered@common_toggles.gamemode_switcher_radio_background_checked": {
+    "$border_visible": true,
+    "$hover_text_visible": true
+  },
+
+  "gamemode_switcher_radio_background_unchecked_locked@common_toggles.gamemode_switcher_radio_background_unchecked": {
+    "alpha": 0.5
+  },
+
+  "gamemode_switcher_radio_background_checked_locked@common_toggles.gamemode_switcher_radio_background_checked": {
+    "alpha": 0.5
+  }
+}

@@ -1,0 +1,13 @@
+menu.enableOverlay=Aktivera inställningsöverlägg	#
+options.hudOverlayEnabled.toastMessage=Inställningsöverlägg aktiverat framgångsrikt!	#
+
+options.quickSettings=Snabbinställningar	#
+options.showSettings=Visa inställningar	#
+
+options.spectatorModeUsageWarning.title=Åskådarläge: Läs innan du fortsätter	#
+options.spectatorModeUsageWarning.body=Du är i åskådarläge. Du kommer inte att kunna interagera med några element/alternativ i Inställningar eller Inställningsöverlägg direkt på HUD. Detta är tyvärr ett spelfel som inte går att fixa. För att avsluta åskådarläget, om du har behörighet, prova något av följande steg:	#
+options.spectatorModeUsageWarning.body.item1=+ Öppna Pausskärmen och tryck på Fly-knappen längst upp på skärmen.	#
+options.spectatorModeUsageWarning.body.item2=+ Öppna chatten och skriv §l"/gamemode default @s"§r.	#
+options.spectatorModeUsageWarning.body.item3=+ Avaktivera Settings Overlay-paketet och ställ in manuellt till ett annat spelläge senare.	#
+options.spectatorModeUsageWarning.body.dismiss=Tryck på "Avfärda" för att stänga den här dialogrutan, om du inte kan stänga den här dialogrutan, eller om du inte vill se den här dialogrutan igen, öppna filen /ui/_global_variables.json och ställ in "$disable_spectator_mode_dialog" till §ltrue§r.	#
+options.spectatorModeUsageWarning.dismiss=Avfärda	#

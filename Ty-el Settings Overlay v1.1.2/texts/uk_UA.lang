@@ -1,0 +1,13 @@
+menu.enableOverlay=Увімкнути накладення налаштувань	#
+options.hudOverlayEnabled.toastMessage=Накладення налаштувань успішно ввімкнено!	#
+
+options.quickSettings=Швидкі налаштування	#
+options.showSettings=Показати налаштування	#
+
+options.spectatorModeUsageWarning.title=Режим глядача: прочитайте, перш ніж продовжити	#
+options.spectatorModeUsageWarning.body=Ви в режимі глядача. Ви не зможете взаємодіяти з будь-якими елементами/параметрами в налаштувань або накладення налаштувань безпосередньо на HUD. На жаль, це невиправна помилка гри. Щоб вийти з режиму глядача, якщо у вас є дозволи, виконайте будь-який із наведених нижче кроків.	#
+options.spectatorModeUsageWarning.body.item1=+ Відкрийте екран паузи та натисніть кнопку Виходу у верхній частині екрана.	#
+options.spectatorModeUsageWarning.body.item2=+ Відкрийте чат і введіть текст §l«/gamemode default @s»§r.	#
+options.spectatorModeUsageWarning.body.item3=+ Деактивуйте ресурспак Settings Overlay та вручну перейдіть до іншого режиму гри пізніше.	#
+options.spectatorModeUsageWarning.body.dismiss=Натисніть «Відхилити», щоб закрити це діалогове вікно, якщо ви не можете закрити це діалогове вікно або якщо ви більше не хочете бачити це діалогове вікно, відкрийте файл /ui/_global_variables.json і встановіть для «$disable_spectator_mode_dialog» значення §ltrue§r.	#
+options.spectatorModeUsageWarning.dismiss=Відхилити	#

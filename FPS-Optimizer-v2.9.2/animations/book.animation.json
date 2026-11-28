@@ -1,0 +1,1 @@
+{"format_version":"1.8.0","animations":{"animation.enchanting_table.book_open":{"loop":true,"bones":{"book_flap_right":{"rotation":[0.0,0.0,-75.0]},"book_flap_left":{"rotation":[0.0,0.0,75.0]}}},"animation.enchanting_table.book_idle":{"loop":true,"bones":{"book":{"rotation":[0.0,0.0,0.0],"position":[0.0,0.0,0.0]}}}}}
